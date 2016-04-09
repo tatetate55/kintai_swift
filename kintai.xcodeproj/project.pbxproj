@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60F672E1C665A9B00620949 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F672D1C665A9B00620949 /* MessageUI.framework */; };
 		C62C3F741C567771005E85BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F731C567771005E85BA /* AppDelegate.swift */; };
 		C62C3F761C567771005E85BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F751C567771005E85BA /* ViewController.swift */; };
 		C62C3F791C567771005E85BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C3F771C567771005E85BA /* Main.storyboard */; };
@@ -14,6 +15,21 @@
 		C62C3F7E1C567771005E85BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */; };
 		C62C3F891C567771005E85BA /* kintaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F881C567771005E85BA /* kintaiTests.swift */; };
 		C62C3F941C567772005E85BA /* kintaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F931C567772005E85BA /* kintaiUITests.swift */; };
+		C6BC94CA1C87297B00725EBF /* appicon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94BB1C87297B00725EBF /* appicon-60@2x.png */; };
+		C6BC94CB1C87297B00725EBF /* appicon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94BC1C87297B00725EBF /* appicon-60@3x.png */; };
+		C6BC94CC1C87297B00725EBF /* appicon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94BD1C87297B00725EBF /* appicon-72.png */; };
+		C6BC94CD1C87297B00725EBF /* appicon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94BE1C87297B00725EBF /* appicon-72@2x.png */; };
+		C6BC94CE1C87297B00725EBF /* appicon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94BF1C87297B00725EBF /* appicon-76.png */; };
+		C6BC94CF1C87297B00725EBF /* appicon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C01C87297B00725EBF /* appicon-76@2x.png */; };
+		C6BC94D01C87297B00725EBF /* appicon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C11C87297B00725EBF /* appicon-Small-40.png */; };
+		C6BC94D11C87297B00725EBF /* appicon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C21C87297B00725EBF /* appicon-Small-40@2x.png */; };
+		C6BC94D21C87297B00725EBF /* appicon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C31C87297B00725EBF /* appicon-Small-50.png */; };
+		C6BC94D31C87297B00725EBF /* appicon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C41C87297B00725EBF /* appicon-Small-50@2x.png */; };
+		C6BC94D41C87297B00725EBF /* appicon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C51C87297B00725EBF /* appicon-Small.png */; };
+		C6BC94D51C87297B00725EBF /* appicon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C61C87297B00725EBF /* appicon-Small@2x.png */; };
+		C6BC94D61C87297B00725EBF /* appicon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C71C87297B00725EBF /* appicon-Small@3x.png */; };
+		C6BC94D71C87297B00725EBF /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C81C87297B00725EBF /* appicon.png */; };
+		C6BC94D81C87297B00725EBF /* appicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C91C87297B00725EBF /* appicon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C60F672D1C665A9B00620949 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C62C3F701C567771005E85BA /* kintai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kintai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62C3F731C567771005E85BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C62C3F751C567771005E85BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +64,21 @@
 		C62C3F8F1C567771005E85BA /* kintaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kintaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62C3F931C567772005E85BA /* kintaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kintaiUITests.swift; sourceTree = "<group>"; };
 		C62C3F951C567772005E85BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6BC94BB1C87297B00725EBF /* appicon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-60@2x.png"; sourceTree = "<group>"; };
+		C6BC94BC1C87297B00725EBF /* appicon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-60@3x.png"; sourceTree = "<group>"; };
+		C6BC94BD1C87297B00725EBF /* appicon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-72.png"; sourceTree = "<group>"; };
+		C6BC94BE1C87297B00725EBF /* appicon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-72@2x.png"; sourceTree = "<group>"; };
+		C6BC94BF1C87297B00725EBF /* appicon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-76.png"; sourceTree = "<group>"; };
+		C6BC94C01C87297B00725EBF /* appicon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-76@2x.png"; sourceTree = "<group>"; };
+		C6BC94C11C87297B00725EBF /* appicon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-Small-40.png"; sourceTree = "<group>"; };
+		C6BC94C21C87297B00725EBF /* appicon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-Small-40@2x.png"; sourceTree = "<group>"; };
+		C6BC94C31C87297B00725EBF /* appicon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-Small-50.png"; sourceTree = "<group>"; };
+		C6BC94C41C87297B00725EBF /* appicon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-Small-50@2x.png"; sourceTree = "<group>"; };
+		C6BC94C51C87297B00725EBF /* appicon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-Small.png"; sourceTree = "<group>"; };
+		C6BC94C61C87297B00725EBF /* appicon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-Small@2x.png"; sourceTree = "<group>"; };
+		C6BC94C71C87297B00725EBF /* appicon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-Small@3x.png"; sourceTree = "<group>"; };
+		C6BC94C81C87297B00725EBF /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
+		C6BC94C91C87297B00725EBF /* appicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60F672E1C665A9B00620949 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +110,8 @@
 		C62C3F671C567771005E85BA = {
 			isa = PBXGroup;
 			children = (
+				C6BC949C1C87272400725EBF /* img */,
+				C60F672D1C665A9B00620949 /* MessageUI.framework */,
 				C62C3F721C567771005E85BA /* kintai */,
 				C62C3F871C567771005E85BA /* kintaiTests */,
 				C62C3F921C567772005E85BA /* kintaiUITests */,
@@ -123,6 +158,28 @@
 				C62C3F951C567772005E85BA /* Info.plist */,
 			);
 			path = kintaiUITests;
+			sourceTree = "<group>";
+		};
+		C6BC949C1C87272400725EBF /* img */ = {
+			isa = PBXGroup;
+			children = (
+				C6BC94BB1C87297B00725EBF /* appicon-60@2x.png */,
+				C6BC94BC1C87297B00725EBF /* appicon-60@3x.png */,
+				C6BC94BD1C87297B00725EBF /* appicon-72.png */,
+				C6BC94BE1C87297B00725EBF /* appicon-72@2x.png */,
+				C6BC94BF1C87297B00725EBF /* appicon-76.png */,
+				C6BC94C01C87297B00725EBF /* appicon-76@2x.png */,
+				C6BC94C11C87297B00725EBF /* appicon-Small-40.png */,
+				C6BC94C21C87297B00725EBF /* appicon-Small-40@2x.png */,
+				C6BC94C31C87297B00725EBF /* appicon-Small-50.png */,
+				C6BC94C41C87297B00725EBF /* appicon-Small-50@2x.png */,
+				C6BC94C51C87297B00725EBF /* appicon-Small.png */,
+				C6BC94C61C87297B00725EBF /* appicon-Small@2x.png */,
+				C6BC94C71C87297B00725EBF /* appicon-Small@3x.png */,
+				C6BC94C81C87297B00725EBF /* appicon.png */,
+				C6BC94C91C87297B00725EBF /* appicon@2x.png */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +250,7 @@
 				TargetAttributes = {
 					C62C3F6F1C567771005E85BA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5S9BE29758;
 					};
 					C62C3F831C567771005E85BA = {
 						CreatedOnToolsVersion = 7.2;
@@ -230,8 +288,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62C3F7E1C567771005E85BA /* LaunchScreen.storyboard in Resources */,
+				C6BC94D31C87297B00725EBF /* appicon-Small-50@2x.png in Resources */,
+				C6BC94D61C87297B00725EBF /* appicon-Small@3x.png in Resources */,
+				C6BC94CC1C87297B00725EBF /* appicon-72.png in Resources */,
+				C6BC94D51C87297B00725EBF /* appicon-Small@2x.png in Resources */,
+				C6BC94CB1C87297B00725EBF /* appicon-60@3x.png in Resources */,
 				C62C3F7B1C567771005E85BA /* Assets.xcassets in Resources */,
+				C6BC94CF1C87297B00725EBF /* appicon-76@2x.png in Resources */,
+				C6BC94D21C87297B00725EBF /* appicon-Small-50.png in Resources */,
+				C6BC94D11C87297B00725EBF /* appicon-Small-40@2x.png in Resources */,
+				C6BC94D41C87297B00725EBF /* appicon-Small.png in Resources */,
 				C62C3F791C567771005E85BA /* Main.storyboard in Resources */,
+				C6BC94CE1C87297B00725EBF /* appicon-76.png in Resources */,
+				C6BC94D81C87297B00725EBF /* appicon@2x.png in Resources */,
+				C6BC94CD1C87297B00725EBF /* appicon-72@2x.png in Resources */,
+				C6BC94D01C87297B00725EBF /* appicon-Small-40.png in Resources */,
+				C6BC94CA1C87297B00725EBF /* appicon-60@2x.png in Resources */,
+				C6BC94D71C87297B00725EBF /* appicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +470,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KAZUHIRO KAMAKURA (5S9BE29758)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kintai/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "80978564-fb74-4031-bd41-63d46902c106";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -408,10 +486,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KAZUHIRO KAMAKURA (5S9BE29758)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kintai/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "80978564-fb74-4031-bd41-63d46902c106";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -482,6 +565,7 @@
 				C62C3F9A1C567772005E85BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C62C3F9B1C567772005E85BA /* Build configuration list for PBXNativeTarget "kintaiTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +574,7 @@
 				C62C3F9D1C567772005E85BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C62C3F9E1C567772005E85BA /* Build configuration list for PBXNativeTarget "kintaiUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +583,7 @@
 				C62C3FA01C567772005E85BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
