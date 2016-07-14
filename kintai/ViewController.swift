@@ -148,7 +148,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
             fromDate: date
         )
         
-        weekArray[dateComp.weekday-1] = weekArray[dateComp.weekday] + 1.0
+        weekArray[dateComp.weekday-1] = weekArray[dateComp.weekday-1] + 1.0
         ud.setObject(weekArray, forKey: "udWeek")
         
         
