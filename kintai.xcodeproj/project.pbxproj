@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E10E6CF5EC9847422852974 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446BE4F57EA95095C8F489EE /* Pods.framework */; };
 		C60F672E1C665A9B00620949 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F672D1C665A9B00620949 /* MessageUI.framework */; };
 		C62C3F741C567771005E85BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F731C567771005E85BA /* AppDelegate.swift */; };
 		C62C3F761C567771005E85BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F751C567771005E85BA /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 		C62C3F7E1C567771005E85BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */; };
 		C62C3F891C567771005E85BA /* kintaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F881C567771005E85BA /* kintaiTests.swift */; };
 		C62C3F941C567772005E85BA /* kintaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F931C567772005E85BA /* kintaiUITests.swift */; };
+		C69486E91D3742CC002458A4 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69486E81D3742CC002458A4 /* chartViewController.swift */; };
 		C6BC94CA1C87297B00725EBF /* appicon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94BB1C87297B00725EBF /* appicon-60@2x.png */; };
 		C6BC94CB1C87297B00725EBF /* appicon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94BC1C87297B00725EBF /* appicon-60@3x.png */; };
 		C6BC94CC1C87297B00725EBF /* appicon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94BD1C87297B00725EBF /* appicon-72.png */; };
@@ -50,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15DD7C8D2BFA308D1D0A6FF7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		40302914758A94C036E28717 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		446BE4F57EA95095C8F489EE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F672D1C665A9B00620949 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C62C3F701C567771005E85BA /* kintai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kintai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62C3F731C567771005E85BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		C62C3F8F1C567771005E85BA /* kintaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kintaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62C3F931C567772005E85BA /* kintaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kintaiUITests.swift; sourceTree = "<group>"; };
 		C62C3F951C567772005E85BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C69486E81D3742CC002458A4 /* chartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
 		C6BC94BB1C87297B00725EBF /* appicon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-60@2x.png"; sourceTree = "<group>"; };
 		C6BC94BC1C87297B00725EBF /* appicon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-60@3x.png"; sourceTree = "<group>"; };
 		C6BC94BD1C87297B00725EBF /* appicon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-72.png"; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60F672E1C665A9B00620949 /* MessageUI.framework in Frameworks */,
+				6E10E6CF5EC9847422852974 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36C54AA74815815DC180EBF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40302914758A94C036E28717 /* Pods.debug.xcconfig */,
+				15DD7C8D2BFA308D1D0A6FF7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C62C3F671C567771005E85BA = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +132,8 @@
 				C62C3F871C567771005E85BA /* kintaiTests */,
 				C62C3F921C567772005E85BA /* kintaiUITests */,
 				C62C3F711C567771005E85BA /* Products */,
+				36C54AA74815815DC180EBF3 /* Pods */,
+				ED6A7E2DAB67ADA0B11BD20A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +156,7 @@
 				C62C3F7A1C567771005E85BA /* Assets.xcassets */,
 				C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */,
 				C62C3F7F1C567771005E85BA /* Info.plist */,
+				C69486E81D3742CC002458A4 /* chartViewController.swift */,
 			);
 			path = kintai;
 			sourceTree = "<group>";
@@ -182,6 +201,14 @@
 			name = img;
 			sourceTree = "<group>";
 		};
+		ED6A7E2DAB67ADA0B11BD20A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				446BE4F57EA95095C8F489EE /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C62C3F981C567772005E85BA /* Build configuration list for PBXNativeTarget "kintai" */;
 			buildPhases = (
+				719F759AC0ED39DB5B815A2F /* Check Pods Manifest.lock */,
 				C62C3F6C1C567771005E85BA /* Sources */,
 				C62C3F6D1C567771005E85BA /* Frameworks */,
 				C62C3F6E1C567771005E85BA /* Resources */,
+				BAC227895D19B1E3C2F24D4D /* Embed Pods Frameworks */,
+				978A409471307A5244DF6A7B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,12 +354,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		719F759AC0ED39DB5B815A2F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		978A409471307A5244DF6A7B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAC227895D19B1E3C2F24D4D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C62C3F6C1C567771005E85BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C62C3F761C567771005E85BA /* ViewController.swift in Sources */,
+				C69486E91D3742CC002458A4 /* chartViewController.swift in Sources */,
 				C62C3F741C567771005E85BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +547,7 @@
 		};
 		C62C3F991C567772005E85BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40302914758A94C036E28717 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: KAZUHIRO KAMAKURA (5S9BE29758)";
@@ -484,6 +564,7 @@
 		};
 		C62C3F9A1C567772005E85BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15DD7C8D2BFA308D1D0A6FF7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: KAZUHIRO KAMAKURA (5S9BE29758)";

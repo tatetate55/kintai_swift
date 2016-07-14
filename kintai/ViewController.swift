@@ -19,6 +19,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainText: UITextView!
     
+    var weekArray: [Double] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+    
 
     @IBOutlet weak var switchVacation: UISegmentedControl!
     
@@ -84,8 +86,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         }
         
         let mailViewController = MFMailComposeViewController()
-        var toRecipients = self.toText.text!
-        //let CcRecipients = self.ccText.text!
+        let toRecipients = self.toText.text!
         let ccRecipients =  self.ccText.text!
         let mainTexts:String = self.mainText.text!
 
@@ -120,7 +121,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         
         if ud.objectForKey("udTo") != nil {
             let udTo : String = ud.objectForKey("udTo") as! String
-            toText.text = udTo;
+            toText.text = udTo
         }
         if ud.objectForKey("udCc") != nil {
             let udCc : String = ud.objectForKey("udCc") as! String
@@ -128,17 +129,29 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         }
         if ud.objectForKey("udName") != nil {
             let udName : String = ud.objectForKey("udName") as! String
-            myName.text = udName;
-            
+            myName.text = udName
         }
         if ud.objectForKey("udBoss") != nil {
             let udboss : String = ud.objectForKey("udBoss") as! String
-            bossName.text = udboss;
+            bossName.text = udboss
+        }
+
+        if ud.objectForKey("udWeek") != nil {
+            let udWeek : [Double] = ud.objectForKey("udWeek") as! [Double]
+            weekArray = udWeek
         }
         
+        let date: NSDate = NSDate()
+        let cal: NSCalendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
+        let dateComp: NSDateComponents = cal.components(
+            [NSCalendarUnit.Weekday],
+            fromDate: date
+        )
         
-        // キーidに「taro」という値を格納。（idは任意の文字列でok）
-        //ud.setObject("taro", forKey: "id")
+        weekArray[dateComp.weekday-1] = weekArray[dateComp.weekday] + 1.0
+        ud.setObject(weekArray, forKey: "udWeek")
+        
+        
         // キーidの値を削除
         //ud.removeObjectForKey("id")
         createTitle(myName.text!, dateCate:"午前半休")
@@ -157,11 +170,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     }
     
     // selfをデリゲートにしているので、ここにデリゲートメソッドを書く
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-    
     
     
     // タイトルを作成
@@ -202,4 +214,3 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
-

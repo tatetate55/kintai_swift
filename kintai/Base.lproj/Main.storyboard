@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--mail-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="one" id="BYZ-38-t0r" customClass="ViewController" customModule="kintai" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,7 +152,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="mail" id="pU6-Ti-onQ"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="pU6-Ti-onQ"/>
                     <connections>
                         <outlet property="bossName" destination="fb5-J5-HgR" id="xsd-FU-V5E"/>
                         <outlet property="ccText" destination="ClD-0L-FEv" id="nto-lr-5IS"/>
@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="241" y="-230"/>
         </scene>
-        <!--View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="twq-K4-YqQ">
             <objects>
-                <viewController storyboardIdentifier="two" id="pZr-Ya-ZG4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="two" id="pZr-Ya-ZG4" customClass="chartViewController" customModule="kintai" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Zs-ne-Uue"/>
                         <viewControllerLayoutGuide type="bottom" id="rjE-F2-fQy"/>
@@ -178,9 +178,23 @@
                     <view key="view" contentMode="scaleToFill" id="Dad-DA-ohX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lx0-1V-bMs" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="173" y="84" width="332" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lx0-1V-bMs" firstAttribute="leading" secondItem="Dad-DA-ohX" secondAttribute="leadingMargin" id="5aW-yi-SH1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lx0-1V-bMs" secondAttribute="trailing" id="KZd-on-Jwk"/>
+                            <constraint firstItem="Lx0-1V-bMs" firstAttribute="top" secondItem="3Zs-ne-Uue" secondAttribute="bottom" constant="30" id="uTU-4i-DcU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="qz5-6V-QxZ"/>
+                    <connections>
+                        <outlet property="barChartView" destination="Lx0-1V-bMs" id="ICp-Sx-HM9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3S-Xk-8oU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
