@@ -100,6 +100,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wzT-gh-PMC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="1K5-qE-YDr"/>
                             <constraint firstItem="wzT-gh-PMC" firstAttribute="top" secondItem="Mx6-6Z-HwR" secondAttribute="bottom" constant="10" id="3bZ-kU-WSD"/>
@@ -151,6 +152,9 @@
                                 <exclude reference="KQU-k4-4dv"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="kir-dN-kV3" appends="YES" id="zew-ha-pVa"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="pU6-Ti-onQ"/>
                     <connections>
@@ -164,6 +168,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kir-dN-kV3">
+                    <connections>
+                        <action selector="tapScreen:" destination="BYZ-38-t0r" id="mb9-5F-JFV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="241" y="-230"/>
         </scene>

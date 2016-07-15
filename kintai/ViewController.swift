@@ -210,6 +210,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
 //        super.didReceiveMemoryWarning()
 //        // Dispose of any resources that can be recreated.
 //    }
+    @IBAction func tapScreen(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
+    
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
     self.dismissViewControllerAnimated(true, completion: nil)
     }
