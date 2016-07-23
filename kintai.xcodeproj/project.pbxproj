@@ -550,14 +550,14 @@
 			baseConfigurationReference = 40302914758A94C036E28717 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: KAZUHIRO KAMAKURA (5S9BE29758)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kintai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "80978564-fb74-4031-bd41-63d46902c106";
+				PROVISIONING_PROFILE = "719afe8c-2af5-4699-baab-9895e22693ee";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -567,14 +567,14 @@
 			baseConfigurationReference = 15DD7C8D2BFA308D1D0A6FF7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: KAZUHIRO KAMAKURA (5S9BE29758)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kintai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "80978564-fb74-4031-bd41-63d46902c106";
+				PROVISIONING_PROFILE = "719afe8c-2af5-4699-baab-9895e22693ee";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
