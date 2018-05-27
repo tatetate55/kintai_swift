@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		637D84F941111ED9BCB53541 /* Pods_kintaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA7EA5B48B3905B044C5ABD /* Pods_kintaiUITests.framework */; };
 		6E10E6CF5EC9847422852974 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446BE4F57EA95095C8F489EE /* Pods.framework */; };
+		BC16C44927DC0F32734CAD1C /* Pods_kintai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB0B59EE8686A93AD9CCA37 /* Pods_kintai.framework */; };
 		C60F672E1C665A9B00620949 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C60F672D1C665A9B00620949 /* MessageUI.framework */; };
 		C62C3F741C567771005E85BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F731C567771005E85BA /* AppDelegate.swift */; };
 		C62C3F761C567771005E85BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F751C567771005E85BA /* ViewController.swift */; };
@@ -32,6 +34,7 @@
 		C6BC94D61C87297B00725EBF /* appicon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C71C87297B00725EBF /* appicon-Small@3x.png */; };
 		C6BC94D71C87297B00725EBF /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C81C87297B00725EBF /* appicon.png */; };
 		C6BC94D81C87297B00725EBF /* appicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6BC94C91C87297B00725EBF /* appicon@2x.png */; };
+		CB7C9564D946CB000A053CAE /* Pods_kintaiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741FCCEC034F7D7EFF3E3780 /* Pods_kintaiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,13 @@
 		15DD7C8D2BFA308D1D0A6FF7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		40302914758A94C036E28717 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		446BE4F57EA95095C8F489EE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D312DEF3CFF239AAE180E27 /* Pods-kintaiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiUITests/Pods-kintaiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5EB4E57954539CAAFEDDB67E /* Pods-kintaiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiTests/Pods-kintaiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6648FC1098FA605026B69DEC /* Pods-kintaiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiUITests/Pods-kintaiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		741FCCEC034F7D7EFF3E3780 /* Pods_kintaiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kintaiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		799CA12A2215588E4F9B03CB /* Pods-kintai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintai.release.xcconfig"; path = "Pods/Target Support Files/Pods-kintai/Pods-kintai.release.xcconfig"; sourceTree = "<group>"; };
+		9AB0B59EE8686A93AD9CCA37 /* Pods_kintai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kintai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA7EA5B48B3905B044C5ABD /* Pods_kintaiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kintaiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F672D1C665A9B00620949 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C62C3F701C567771005E85BA /* kintai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kintai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62C3F731C567771005E85BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +95,8 @@
 		C6BC94C71C87297B00725EBF /* appicon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-Small@3x.png"; sourceTree = "<group>"; };
 		C6BC94C81C87297B00725EBF /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
 		C6BC94C91C87297B00725EBF /* appicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon@2x.png"; sourceTree = "<group>"; };
+		D4DF3B6FE176448B46F350EC /* Pods-kintaiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiTests/Pods-kintaiTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB4D9F26C9DDF4CD0AFB4996 /* Pods-kintai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kintai/Pods-kintai.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,7 @@
 			files = (
 				C60F672E1C665A9B00620949 /* MessageUI.framework in Frameworks */,
 				6E10E6CF5EC9847422852974 /* Pods.framework in Frameworks */,
+				BC16C44927DC0F32734CAD1C /* Pods_kintai.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7C9564D946CB000A053CAE /* Pods_kintaiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637D84F941111ED9BCB53541 /* Pods_kintaiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +134,12 @@
 			children = (
 				40302914758A94C036E28717 /* Pods.debug.xcconfig */,
 				15DD7C8D2BFA308D1D0A6FF7 /* Pods.release.xcconfig */,
+				EB4D9F26C9DDF4CD0AFB4996 /* Pods-kintai.debug.xcconfig */,
+				799CA12A2215588E4F9B03CB /* Pods-kintai.release.xcconfig */,
+				5EB4E57954539CAAFEDDB67E /* Pods-kintaiTests.debug.xcconfig */,
+				D4DF3B6FE176448B46F350EC /* Pods-kintaiTests.release.xcconfig */,
+				4D312DEF3CFF239AAE180E27 /* Pods-kintaiUITests.debug.xcconfig */,
+				6648FC1098FA605026B69DEC /* Pods-kintaiUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -152,11 +173,11 @@
 			children = (
 				C62C3F731C567771005E85BA /* AppDelegate.swift */,
 				C62C3F751C567771005E85BA /* ViewController.swift */,
+				C69486E81D3742CC002458A4 /* chartViewController.swift */,
 				C62C3F771C567771005E85BA /* Main.storyboard */,
 				C62C3F7A1C567771005E85BA /* Assets.xcassets */,
 				C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */,
 				C62C3F7F1C567771005E85BA /* Info.plist */,
-				C69486E81D3742CC002458A4 /* chartViewController.swift */,
 			);
 			path = kintai;
 			sourceTree = "<group>";
@@ -205,6 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				446BE4F57EA95095C8F489EE /* Pods.framework */,
+				9AB0B59EE8686A93AD9CCA37 /* Pods_kintai.framework */,
+				741FCCEC034F7D7EFF3E3780 /* Pods_kintaiTests.framework */,
+				9EA7EA5B48B3905B044C5ABD /* Pods_kintaiUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,12 +240,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C62C3F981C567772005E85BA /* Build configuration list for PBXNativeTarget "kintai" */;
 			buildPhases = (
+				590D608B4B8315F75B7FA3FB /* [CP] Check Pods Manifest.lock */,
 				719F759AC0ED39DB5B815A2F /* Check Pods Manifest.lock */,
 				C62C3F6C1C567771005E85BA /* Sources */,
 				C62C3F6D1C567771005E85BA /* Frameworks */,
 				C62C3F6E1C567771005E85BA /* Resources */,
 				BAC227895D19B1E3C2F24D4D /* Embed Pods Frameworks */,
-				978A409471307A5244DF6A7B /* Copy Pods Resources */,
+				D808351183AD609D34B6B183 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C62C3F9B1C567772005E85BA /* Build configuration list for PBXNativeTarget "kintaiTests" */;
 			buildPhases = (
+				7CDE74591A2CBAFD9986003C /* [CP] Check Pods Manifest.lock */,
 				C62C3F801C567771005E85BA /* Sources */,
 				C62C3F811C567771005E85BA /* Frameworks */,
 				C62C3F821C567771005E85BA /* Resources */,
@@ -254,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C62C3F9E1C567772005E85BA /* Build configuration list for PBXNativeTarget "kintaiUITests" */;
 			buildPhases = (
+				34CB62B538E0194828960145 /* [CP] Check Pods Manifest.lock */,
 				C62C3F8B1C567771005E85BA /* Sources */,
 				C62C3F8C1C567771005E85BA /* Frameworks */,
 				C62C3F8D1C567771005E85BA /* Resources */,
@@ -355,6 +382,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		34CB62B538E0194828960145 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kintaiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		590D608B4B8315F75B7FA3FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kintai-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		719F759AC0ED39DB5B815A2F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,19 +433,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		978A409471307A5244DF6A7B /* Copy Pods Resources */ = {
+		7CDE74591A2CBAFD9986003C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kintaiTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BAC227895D19B1E3C2F24D4D /* Embed Pods Frameworks */ = {
@@ -398,6 +464,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D808351183AD609D34B6B183 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-kintai/Pods-kintai-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kintai/Pods-kintai-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -500,7 +584,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -538,7 +622,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -547,40 +631,43 @@
 		};
 		C62C3F991C567772005E85BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40302914758A94C036E28717 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = EB4D9F26C9DDF4CD0AFB4996 /* Pods-kintai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kintai/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "719afe8c-2af5-4699-baab-9895e22693ee";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C62C3F9A1C567772005E85BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15DD7C8D2BFA308D1D0A6FF7 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 799CA12A2215588E4F9B03CB /* Pods-kintai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kintai/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "719afe8c-2af5-4699-baab-9895e22693ee";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		C62C3F9C1C567772005E85BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EB4E57954539CAAFEDDB67E /* Pods-kintaiTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = kintaiTests/Info.plist;
@@ -593,6 +680,7 @@
 		};
 		C62C3F9D1C567772005E85BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DF3B6FE176448B46F350EC /* Pods-kintaiTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = kintaiTests/Info.plist;
@@ -605,6 +693,7 @@
 		};
 		C62C3F9F1C567772005E85BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D312DEF3CFF239AAE180E27 /* Pods-kintaiUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = kintaiUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -617,6 +706,7 @@
 		};
 		C62C3FA01C567772005E85BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6648FC1098FA605026B69DEC /* Pods-kintaiUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = kintaiUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

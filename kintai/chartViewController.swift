@@ -19,10 +19,10 @@ class chartViewController: UIViewController {
         super.viewDidLoad()
         
         // 「ud」というインスタンスをつくる。
-        let ud = NSUserDefaults.standardUserDefaults()
+        let ud = UserDefaults.standard
 
-        if ud.objectForKey("udWeek") != nil {
-            let udWeek : [Double] = ud.objectForKey("udWeek") as! [Double]
+        if ud.object(forKey: "udWeek") != nil {
+            let udWeek : [Double] = ud.object(forKey: "udWeek") as! [Double]
             weekArray = udWeek
         }
         
@@ -33,9 +33,9 @@ class chartViewController: UIViewController {
         barChartView.pinchZoomEnabled = false
         barChartView.drawBarShadowEnabled = false
         barChartView.drawBordersEnabled = true
-        barChartView.descriptionText = "アプリ起動曜日"
+        barChartView.description = "アプリ起動曜日"
         
-        setChart(months, values: unitsSold)
+        setChart(dataPoints: months, values: unitsSold)
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +52,7 @@ class chartViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "起動回数")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "起動回数")
         let chartData = BarChartData(xVals: months, dataSet: chartDataSet)
         barChartView.data = chartData  
     }
