@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import RealmSwift
 
 var vacationType:Int = 1 //　休みの種類
 
@@ -18,6 +19,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     @IBOutlet weak var bossName: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainText: UITextView!
+    
+    let realm = try! Realm()
+    // DB
+    var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
     
     var weekArray: [Double] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
     
@@ -114,8 +119,31 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // 「ud」というインスタンスをつくる。
         let ud = UserDefaults.standard
+        
+        // ここに初期化処理を書く
+        // "firstLaunch"をキーに、Bool型の値を保持する
+        let dict = ["firstLaunch": true]
+
+        // デフォルト値登録
+        // ※すでに値が更新されていた場合は、更新後の値のままになる
+        ud.register(defaults: dict)
+        // "firstLaunch"に紐づく値がtrueなら(=初回起動)、値をfalseに更新して処理を行う
+        if ud.bool(forKey: "firstLaunch") {
+            print("初回起動の時だけ呼ばれるよ")
+            let message = messageText()
+            message.title = "【勤怠】タイトル"
+            print(message.title)
+            message.message = "タイトルと本文の編集はメニューの編集画面からできます。"
+            try! realm.write {
+                realm.add(message, update: true)
+            }
+            ud.set(false, forKey: "firstLaunch")
+            
+        }
+        
         // キーがidの値をとります。
         
         if ud.object(forKey: "udTo") != nil {
@@ -164,6 +192,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         bossName.delegate = self
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -200,15 +229,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         } else {
             myName2 = "\(myName)です。"
         }
-        
-        
-        mainText.text = "\(bossName2)お疲れ様です。\(myName2)\n本日体調不良のため\(dateCate)を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。"
+     
+        mainText.text = messageArray[0].message //"\(bossName2)お疲れ様です。\(myName2)\n本日体調不良のため\(dateCate)を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。"
     }
     
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
     @IBAction func tapScreen(sender: AnyObject) {
         self.view.endEditing(true)
     }

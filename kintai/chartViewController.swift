@@ -33,27 +33,27 @@ class chartViewController: UIViewController {
         barChartView.pinchZoomEnabled = false
         barChartView.drawBarShadowEnabled = false
         barChartView.drawBordersEnabled = true
-        barChartView.description = "アプリ起動曜日"
+      //  barChartView.description = "アプリ起動曜日"
         
-        setChart(dataPoints: months, values: unitsSold)
+  //      setChart(dataPoints: months, values: unitsSold)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func setChart(dataPoints: [String], values: [Double]) {
-        barChartView.noDataText = "You need to provide data for the chart."
-        
-        var dataEntries: [BarChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
-            dataEntries.append(dataEntry)
-        }
-        
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "起動回数")
-        let chartData = BarChartData(xVals: months, dataSet: chartDataSet)
-        barChartView.data = chartData  
-    }
+//    func setChart(dataPoints: [String], values: [Double]) {
+//        barChartView.noDataText = "You need to provide data for the chart."
+//
+//        var dataEntries: [BarChartDataEntry] = []
+//
+//        for i in 0..<dataPoints.count {
+//            let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
+//            dataEntries.append(dataEntry)
+//        }
+//
+//        let chartDataSet = BarChartDataSet(values: dataEntries, label: "起動回数")
+//        let chartData = BarChartData(xVals: months, dataSet: chartDataSet)
+//        barChartView.data = chartData
+//    }
 }
