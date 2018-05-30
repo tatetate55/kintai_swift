@@ -132,7 +132,7 @@
                             <constraint firstItem="72O-KW-vTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="vmc-CI-VXZ"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="kir-dN-kV3" appends="YES" id="zew-ha-pVa"/>
+                            <outletCollection property="gestureRecognizers" destination="kir-dN-kV3" appends="YES" id="8E7-iR-yDJ"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="送信画面" id="pU6-Ti-onQ"/>
@@ -149,7 +149,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="kir-dN-kV3">
                     <connections>
-                        <action selector="tapScreen:" destination="BYZ-38-t0r" id="mb9-5F-JFV"/>
+                        <action selector="tapScreenWithSender:" destination="BYZ-38-t0r" id="2gt-UA-s9b"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3S-Xk-8oU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="582.45877061469275"/>
+            <point key="canvasLocation" x="241" y="501"/>
         </scene>
         <!--メール文の編集-->
         <scene sceneID="Qg0-rE-SvN">
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r84-sn-L1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312.80000000000001" y="1214.8425787106448"/>
+            <point key="canvasLocation" x="241" y="1215"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="efH-IS-bfn">
@@ -246,7 +246,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vmk-oK-JCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-624" y="421"/>
+            <point key="canvasLocation" x="-626" y="501"/>
         </scene>
         <!--メール文-->
         <scene sceneID="bdr-Tz-AVi">

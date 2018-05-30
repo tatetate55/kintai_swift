@@ -26,14 +26,85 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     
     @IBOutlet weak var switchVacation: UISegmentedControl!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+  
+        // 「ud」というインスタンスをつくる。
+        let ud = UserDefaults.standard
+        
+        // ここに初期化処理を書く
+        // "firstLaunch"をキーに、Bool型の値を保持する
+        let dict = ["firstLaunch": true]
+        // デフォルト値登録
+        // ※すでに値が更新されていた場合は、更新後の値のままになる
+        ud.register(defaults: dict)
+        // "firstLaunch"に紐づく値がtrueなら(=初回起動)、値をfalseに更新して処理を行う
+        if ud.bool(forKey: "firstLaunch") {
+            print("初回起動の時だけ呼ばれるよ")
+            let message = messageText()
+            message.title = "【勤怠】タイトル"
+            print(message.title)
+            message.message = "タイトルと本文の編集はメニューの編集画面からできます。"
+            try! realm.write {
+                realm.add(message, update: true)
+            }
+            ud.set(false, forKey: "firstLaunch")
+            
+        }
+        
+        // キーがidの値をとります。
+        
+        if ud.object(forKey: "udTo") != nil {
+            let udTo : String = ud.object(forKey: "udTo") as! String
+            toText.text = udTo
+        }
+        if ud.object(forKey: "udCc") != nil {
+            let udCc : String = ud.object(forKey: "udCc") as! String
+            ccText.text = udCc
+        }
+        if ud.object(forKey: "udName") != nil {
+            let udName : String = ud.object(forKey: "udName") as! String
+            myName.text = udName
+        }
+        if ud.object(forKey: "udBoss") != nil {
+            let udboss : String = ud.object(forKey: "udBoss") as! String
+            bossName.text = udboss
+        }
+        
+        let date: NSDate = NSDate()
+        let cal: NSCalendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
+        let dateComp: NSDateComponents = cal.components(
+            [NSCalendar.Unit.weekday],
+            from: date as Date
+            ) as NSDateComponents
+        
+        
+        // キーidの値を削除
+        //ud.removeObjectForKey("id")
+        createTitle(myName: myName.text!, dateCate:"午前半休")
+        createMainText(myName: myName.text!, bossName: bossName.text!,dateCate:"午前半休")
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        // selfをデリゲートにする
+        toText.delegate = self
+        ccText.delegate = self
+        myName.delegate = self
+        bossName.delegate = self
+        
+        //最後にセグメント追加
+        var messageTitleArray:[String] = []
+        for message in messageArray {
+            messageTitleArray.append(message.title)
+        }
+        switchVacation.changeAllSegmentWithArray(arr: messageTitleArray)
+        
+        
+    }
+    
     @IBAction func changeKishoSegment(sender: UISegmentedControl) {
-        vacationType = 0//sender.selectedSegmentIndex
-//        if (sender.selectedSegmentIndex == 0) {
-//            //最初のセグメントが0。セグメント数に合わせて条件分岐を
-//            vacationType = 0
-//        } else if (sender.selectedSegmentIndex == 1) {
-//            vacationType = 0
-//        }
+        vacationType = sender.selectedSegmentIndex
     }
     
     @IBAction func saveButton(sender: AnyObject) {
@@ -104,73 +175,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         mailViewController.setMessageBody(mainTexts, isHTML: false)
         self.present(mailViewController, animated: true, completion: nil)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // 「ud」というインスタンスをつくる。
-        let ud = UserDefaults.standard
-        
-        // ここに初期化処理を書く
-        // "firstLaunch"をキーに、Bool型の値を保持する
-        let dict = ["firstLaunch": true]
 
-        // デフォルト値登録
-        // ※すでに値が更新されていた場合は、更新後の値のままになる
-        ud.register(defaults: dict)
-        // "firstLaunch"に紐づく値がtrueなら(=初回起動)、値をfalseに更新して処理を行う
-        if ud.bool(forKey: "firstLaunch") {
-            print("初回起動の時だけ呼ばれるよ")
-            let message = messageText()
-            message.title = "【勤怠】タイトル"
-            print(message.title)
-            message.message = "タイトルと本文の編集はメニューの編集画面からできます。"
-            try! realm.write {
-                realm.add(message, update: true)
-            }
-            ud.set(false, forKey: "firstLaunch")
-            
-        }
-        
-        // キーがidの値をとります。
-        
-        if ud.object(forKey: "udTo") != nil {
-            let udTo : String = ud.object(forKey: "udTo") as! String
-            toText.text = udTo
-        }
-        if ud.object(forKey: "udCc") != nil {
-            let udCc : String = ud.object(forKey: "udCc") as! String
-            ccText.text = udCc
-        }
-        if ud.object(forKey: "udName") != nil {
-            let udName : String = ud.object(forKey: "udName") as! String
-            myName.text = udName
-        }
-        if ud.object(forKey: "udBoss") != nil {
-            let udboss : String = ud.object(forKey: "udBoss") as! String
-            bossName.text = udboss
-        }
-
-        let date: NSDate = NSDate()
-        let cal: NSCalendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
-        let dateComp: NSDateComponents = cal.components(
-            [NSCalendar.Unit.weekday],
-            from: date as Date
-            ) as NSDateComponents
-        
-        
-        // キーidの値を削除
-        //ud.removeObjectForKey("id")
-        createTitle(myName: myName.text!, dateCate:"午前半休")
-        createMainText(myName: myName.text!, bossName: bossName.text!,dateCate:"午前半休")
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        // selfをデリゲートにする
-        toText.delegate = self
-        ccText.delegate = self
-        myName.delegate = self
-        bossName.delegate = self
-    }
     
     
     override func didReceiveMemoryWarning() {
@@ -188,7 +193,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     func createTitle(myName: String, dateCate: String ) {
         
         let dateFormatter = DateFormatter()                                   // フォーマットの取得
-        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale!  // JPロケール
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale?  // JPロケール
         dateFormatter.dateFormat = "MM/dd"         // フォーマットの指定
         print(dateFormatter.string(from: NSDate() as Date))
         titleLabel.text = "【勤怠】\(dateFormatter.string(from: NSDate() as Date)) \(myName)　\(dateCate)";
@@ -208,4 +213,15 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+extension UISegmentedControl {
+    func changeAllSegmentWithArray(arr: [String]){
+        self.removeAllSegments()
+        for str in arr {
+            self.insertSegment(withTitle: str, at: self.numberOfSegments, animated: false)
+        }
+        self.selectedSegmentIndex = 0
+    }
+    
 }

@@ -24,6 +24,9 @@
 		C6569F9320BE779900F9765A /* messageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9220BE779900F9765A /* messageText.swift */; };
 		C6569F9620BE91E900F9765A /* messageSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9420BE91E900F9765A /* messageSetTableViewCell.swift */; };
 		C6569F9720BE91E900F9765A /* messageSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */; };
+		C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift */; };
+		C6569F9C20BF642C00F9765A /* addMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9A20BF642C00F9765A /* addMessageViewController.swift */; };
+		C6569F9D20BF642C00F9765A /* addMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9B20BF642C00F9765A /* addMessageViewController.xib */; };
 		C69486E91D3742CC002458A4 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69486E81D3742CC002458A4 /* chartViewController.swift */; };
 		D090C33D2C7169FAC921C66F /* Pods_kintaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3850F0EC12132B12574271 /* Pods_kintaiUITests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +78,9 @@
 		C6569F9220BE779900F9765A /* messageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageText.swift; sourceTree = "<group>"; };
 		C6569F9420BE91E900F9765A /* messageSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageSetTableViewCell.swift; sourceTree = "<group>"; };
 		C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageSetTableViewCell.xib; sourceTree = "<group>"; };
+		C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extension.swift.swift"; sourceTree = "<group>"; };
+		C6569F9A20BF642C00F9765A /* addMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMessageViewController.swift; sourceTree = "<group>"; };
+		C6569F9B20BF642C00F9765A /* addMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addMessageViewController.xib; sourceTree = "<group>"; };
 		C69486E81D3742CC002458A4 /* chartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
 		D4DF3B6FE176448B46F350EC /* Pods-kintaiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiTests/Pods-kintaiTests.release.xcconfig"; sourceTree = "<group>"; };
 		E986BD35535986479FCD3D8C /* Pods_kintaiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kintaiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,10 +160,13 @@
 			isa = PBXGroup;
 			children = (
 				C62C3F731C567771005E85BA /* AppDelegate.swift */,
+				C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift */,
 				C62C3F751C567771005E85BA /* ViewController.swift */,
 				C69486E81D3742CC002458A4 /* chartViewController.swift */,
 				C6569F9020BE702100F9765A /* editTextTableViewController.swift */,
 				C6569F9220BE779900F9765A /* messageText.swift */,
+				C6569F9A20BF642C00F9765A /* addMessageViewController.swift */,
+				C6569F9B20BF642C00F9765A /* addMessageViewController.xib */,
 				C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */,
 				C62C3F771C567771005E85BA /* Main.storyboard */,
 				C62C3F7A1C567771005E85BA /* Assets.xcassets */,
@@ -315,6 +324,7 @@
 				C62C3F7B1C567771005E85BA /* Assets.xcassets in Resources */,
 				C62C3F791C567771005E85BA /* Main.storyboard in Resources */,
 				C6569F9720BE91E900F9765A /* messageSetTableViewCell.xib in Resources */,
+				C6569F9D20BF642C00F9765A /* addMessageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,8 +462,10 @@
 				C62C3F761C567771005E85BA /* ViewController.swift in Sources */,
 				C6569F9320BE779900F9765A /* messageText.swift in Sources */,
 				C69486E91D3742CC002458A4 /* chartViewController.swift in Sources */,
+				C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift in Sources */,
 				C6569F9120BE702100F9765A /* editTextTableViewController.swift in Sources */,
 				C6569F9620BE91E900F9765A /* messageSetTableViewCell.swift in Sources */,
+				C6569F9C20BF642C00F9765A /* addMessageViewController.swift in Sources */,
 				C62C3F741C567771005E85BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

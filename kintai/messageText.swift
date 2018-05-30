@@ -12,7 +12,7 @@ class messageText: Object {
     // id
     @objc dynamic var id = 0
     // メッセージの省略名
-    @objc dynamic var buttonNmae = ""
+    @objc dynamic var buttonNamae = ""
     // メッセージタイトル
     @objc dynamic var title = ""
     // メッセージ本文
