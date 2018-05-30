@@ -42,7 +42,6 @@ class editTextTableViewController: UIViewController, UITableViewDelegate, UITabl
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if section == 0 {
             return messageArray.count
         } else {
@@ -51,17 +50,21 @@ class editTextTableViewController: UIViewController, UITableViewDelegate, UITabl
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier") as! messageSetTableViewCell
-//        print(cell)
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier", for:indexPath) as? messageSetTableViewCell else {
-              fatalError()
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier") as! messageSetTableViewCell
+        //        print(cell)
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier", for:indexPath) as? messageSetTableViewCell else {
+                fatalError()
+            }
+            cell.fill(
+                title : messageArray[indexPath.row].title
+            )
+            return cell
+        } else {
+            let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+            cell.textLabel?.text = "+メール定型文の追加"
+            return cell
         }
-        cell.fill(
-            title : messageArray[indexPath.row].title
-        )
-//        cell.titleLabel.text = "hoge"//messageArray[indexPath.row].title
-
-        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

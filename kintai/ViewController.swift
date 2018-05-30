@@ -10,7 +10,7 @@ import UIKit
 import MessageUI
 import RealmSwift
 
-var vacationType:Int = 1 //　休みの種類
+var vacationType:Int = 0 //　休みの種類
 
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var toText: UITextField!
@@ -24,28 +24,19 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     // DB
     var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
     
-    var weekArray: [Double] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-    
     @IBOutlet weak var switchVacation: UISegmentedControl!
     
     @IBAction func changeKishoSegment(sender: UISegmentedControl) {
-        if (sender.selectedSegmentIndex == 0) {
-            //最初のセグメントが0。セグメント数に合わせて条件分岐を
-            //println("セグメント0")
-            createTitle(myName: myName.text!, dateCate:"午前半休")
-            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"午前半休")
-            vacationType = 1
-            
-        } else if (sender.selectedSegmentIndex == 1) {
-            createTitle(myName: myName.text!, dateCate:"全休")
-            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"全休")
-            vacationType = 2
-            //println("セグメント1")
-        }
+        vacationType = 0//sender.selectedSegmentIndex
+//        if (sender.selectedSegmentIndex == 0) {
+//            //最初のセグメントが0。セグメント数に合わせて条件分岐を
+//            vacationType = 0
+//        } else if (sender.selectedSegmentIndex == 1) {
+//            vacationType = 0
+//        }
     }
     
     @IBAction func saveButton(sender: AnyObject) {
-        
         // udに保存をする
         let ud = UserDefaults.standard
         ud.set(toText.text, forKey: "udTo")
@@ -53,7 +44,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         ud.set(myName.text, forKey: "udName")
         ud.set(bossName.text, forKey: "udBoss")
         // キーidの値を削除ud.removeObjectForKey("id")
-        if(vacationType == 1){
+        if vacationType == 1 {
             createTitle(myName: myName.text!, dateCate:"午前半休")
             createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"午前半休")
         } else {
@@ -96,14 +87,14 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
 
         mailViewController.mailComposeDelegate = self
         mailViewController.setSubject(self.titleLabel.text!)
-        if toRecipients.contains(","){
+        if toRecipients.contains(",") {
             let toAddressArray = toRecipients.components(separatedBy: ",")
             mailViewController.setToRecipients(toAddressArray) //Toアドレスの表示
         } else {
             mailViewController.setToRecipients([toRecipients]) //Toアドレスの表示
         }
         
-        if ccRecipients.contains(","){
+        if ccRecipients.contains(",") {
             let ccAddressArray = ccRecipients.components(separatedBy: ",")
             mailViewController.setCcRecipients(ccAddressArray) //ccアドレスの表示
         } else {
@@ -111,10 +102,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         }
         
         mailViewController.setMessageBody(mainTexts, isHTML: false)
-        
         self.present(mailViewController, animated: true, completion: nil)
-        
-        
     }
     
     override func viewDidLoad() {
@@ -163,20 +151,12 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
             bossName.text = udboss
         }
 
-        if ud.object(forKey: "udWeek") != nil {
-            let udWeek : [Double] = ud.object(forKey: "udWeek") as! [Double]
-            weekArray = udWeek
-        }
-        
         let date: NSDate = NSDate()
         let cal: NSCalendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
         let dateComp: NSDateComponents = cal.components(
             [NSCalendar.Unit.weekday],
             from: date as Date
             ) as NSDateComponents
-        
-        weekArray[dateComp.weekday-1] = weekArray[dateComp.weekday-1] + 1.0
-        ud.set(weekArray, forKey: "udWeek")
         
         
         // キーidの値を削除
@@ -216,21 +196,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     
     func createMainText(myName: String, bossName: String, dateCate: String) {
         
-        var bossName2:String = ""
-        if (bossName == ""){
-            bossName2 = ""
-        } else {
-            bossName2 = "\(bossName)さん"
-        }
-        
-        var myName2:String = ""
-        if (myName == ""){
-            myName2 = ""
-        } else {
-            myName2 = "\(myName)です。"
-        }
-     
-        mainText.text = messageArray[0].message //"\(bossName2)お疲れ様です。\(myName2)\n本日体調不良のため\(dateCate)を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。"
+
+        titleLabel.text = messageArray[vacationType].title
+        mainText.text = messageArray[vacationType].message //"\(bossName2)お疲れ様です。\(myName2)\n本日体調不良のため\(dateCate)を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。"
     }
     
     @IBAction func tapScreen(sender: AnyObject) {

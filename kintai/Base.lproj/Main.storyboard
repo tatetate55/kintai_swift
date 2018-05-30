@@ -58,7 +58,7 @@
                                     <segment title="全休"/>
                                 </segments>
                                 <connections>
-                                    <action selector="changeKishoSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="b4g-Xj-RB8"/>
+                                    <action selector="changeKishoSegmentWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ktf-u4-hum"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5v-bn-Usb">
@@ -141,7 +141,7 @@
                         <outlet property="ccText" destination="ClD-0L-FEv" id="nto-lr-5IS"/>
                         <outlet property="mainText" destination="72O-KW-vTM" id="2yh-5O-nz8"/>
                         <outlet property="myName" destination="Wwo-du-mEG" id="gyg-Rc-VWz"/>
-                        <outlet property="switchVacation" destination="iwh-VV-v6a" id="oED-zA-4YR"/>
+                        <outlet property="switchVacation" destination="iwh-VV-v6a" id="MN1-2e-Emz"/>
                         <outlet property="titleLabel" destination="xOx-Mj-Abi" id="U78-Tv-a3Z"/>
                         <outlet property="toText" destination="Mx6-6Z-HwR" id="0CF-ku-7Rf"/>
                     </connections>
