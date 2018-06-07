@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Charts
+//import Charts
 
 class chartViewController: UIViewController {
     // storyboardから接続
-    @IBOutlet weak var barChartView: BarChartView!
+ //   @IBOutlet weak var barChartView: BarChartView!
     var weekArray: [Double] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
     var months: [String]!
     
@@ -27,13 +27,13 @@ class chartViewController: UIViewController {
         }
         
         months = ["日","月","火","水","木","金","土"]
-        let unitsSold = weekArray//[5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        
-        barChartView.animate(yAxisDuration: 2.0)
-        barChartView.pinchZoomEnabled = false
-        barChartView.drawBarShadowEnabled = false
-        barChartView.drawBordersEnabled = true
-      //  barChartView.description = "アプリ起動曜日"
+//        let unitsSold = weekArray//[5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+//        
+//        barChartView.animate(yAxisDuration: 2.0)
+//        barChartView.pinchZoomEnabled = false
+//        barChartView.drawBarShadowEnabled = false
+//        barChartView.drawBordersEnabled = true
+//      //  barChartView.description = "アプリ起動曜日"
         
   //      setChart(dataPoints: months, values: unitsSold)
     }

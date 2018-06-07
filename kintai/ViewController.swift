@@ -8,7 +8,11 @@
 
 import UIKit
 import MessageUI
-import RealmSwift
+import Intents
+import IntentsUI
+import CoreSpotlight
+import MobileCoreServices
+//import RealmSwift
 
 var vacationType:Int = 0 //　休みの種類
 
@@ -20,9 +24,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainText: UITextView!
     
-    let realm = try! Realm()
+//    let realm = try! Realm()
     // DB
-    var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
+//    var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
     
     @IBOutlet weak var switchVacation: UISegmentedControl!
     
@@ -31,6 +35,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         super.viewDidLoad()
         
   
+        hoge()
         // 「ud」というインスタンスをつくる。
         let ud = UserDefaults.standard
         
@@ -41,18 +46,18 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         // ※すでに値が更新されていた場合は、更新後の値のままになる
         ud.register(defaults: dict)
         // "firstLaunch"に紐づく値がtrueなら(=初回起動)、値をfalseに更新して処理を行う
-        if ud.bool(forKey: "firstLaunch") {
-            print("初回起動の時だけ呼ばれるよ")
-            let message = messageText()
-            message.title = "【勤怠】タイトル"
-            print(message.title)
-            message.message = "タイトルと本文の編集はメニューの編集画面からできます。"
-            try! realm.write {
-                realm.add(message, update: true)
-            }
-            ud.set(false, forKey: "firstLaunch")
-            
-        }
+//        if ud.bool(forKey: "firstLaunch") {
+//            print("初回起動の時だけ呼ばれるよ")
+//            let message = messageText()
+//            message.title = "【勤怠】タイトル"
+//            print(message.title)
+//            message.message = "タイトルと本文の編集はメニューの編集画面からできます。"
+////            try! realm.write {
+////                realm.add(message, update: true)
+////            }
+//            ud.set(false, forKey: "firstLaunch")
+//
+//        }
         
         // キーがidの値をとります。
         
@@ -93,12 +98,12 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         myName.delegate = self
         bossName.delegate = self
         
-        //最後にセグメント追加
-        var messageTitleArray:[String] = []
-        for message in messageArray {
-            messageTitleArray.append(message.title)
-        }
-        switchVacation.changeAllSegmentWithArray(arr: messageTitleArray)
+//        //最後にセグメント追加
+//        var messageTitleArray:[String] = []
+//        for message in messageArray {
+//            messageTitleArray.append(message.title)
+//        }
+//        switchVacation.changeAllSegmentWithArray(arr: messageTitleArray)
         
         
     }
@@ -143,10 +148,18 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     }
     
     @IBAction func sendButton(sender: AnyObject) {
+        // mailCore
+        
+        let intent = SendMailIntent()
+        let interaction = INInteraction(intent: intent, response: nil)
+        interaction.donate() { _ in
+            print("Donated!")
+        }
+        
         
         self.saveAction()
         //メールを送信できるかチェック
-        if MFMailComposeViewController.canSendMail()==false {
+        if MFMailComposeViewController.canSendMail() == false {
             print("Email Send Failed")
             return
         }
@@ -202,8 +215,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     func createMainText(myName: String, bossName: String, dateCate: String) {
         
 
-        titleLabel.text = messageArray[vacationType].title
-        mainText.text = messageArray[vacationType].message //"\(bossName2)お疲れ様です。\(myName2)\n本日体調不良のため\(dateCate)を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。"
+        titleLabel.text = "今日休む"//messageArray[vacationType].title
+        mainText.text = "hogeさんお疲れ様です。\n本日体調不良のため\n全休を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。" //messageArray[vacationType].message //
     }
     
     @IBAction func tapScreen(sender: AnyObject) {
@@ -212,6 +225,27 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func hoge() {
+        // How to donate a shortcut
+        let userActivity = NSUserActivity(activityType: "com.kintai.siri")
+        userActivity.isEligibleForSearch = true
+        userActivity.isEligibleForPrediction = true
+        userActivity.title = "Activity"
+        userActivity.userInfo = ["key": "value"]
+        userActivity.isEligibleForSearch = true
+        userActivity.isEligibleForPrediction = true
+        userActivity.suggestedInvocationPhrase = "I'm tired"
+        
+        let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
+       // let image = UIImage(named: "myImage")!
+      //  attributes.thumbnailData = image.pngData()
+        attributes.contentDescription = "Subtitle"
+        userActivity.contentAttributeSet = attributes
+        
+        self.userActivity = userActivity
     }
 }
 

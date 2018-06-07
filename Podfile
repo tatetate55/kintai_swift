@@ -6,8 +6,8 @@ use_frameworks!
 target 'kintai' do
 
   # Pods for kintai
-pod 'Charts'
-pod 'RealmSwift'
+#pod 'Charts'
+#pod 'RealmSwift'
 
 
   target 'kintaiTests' do

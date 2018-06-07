@@ -7,16 +7,16 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 
 class editTextTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let realm = try! Realm()
-    // DB
-    var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
-    
+//    let realm = try! Realm()
+//    // DB
+//    var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
+//
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,7 +43,7 @@ class editTextTableViewController: UIViewController, UITableViewDelegate, UITabl
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return messageArray.count
+            return 1// messageArray.count
         } else {
             return 1
         }
@@ -57,7 +57,7 @@ class editTextTableViewController: UIViewController, UITableViewDelegate, UITabl
                 fatalError()
             }
             cell.fill(
-                title : messageArray[indexPath.row].title
+                title : "hoge"//messageArray[indexPath.row].title
             )
             return cell
         } else {

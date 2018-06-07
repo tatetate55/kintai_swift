@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PpE-5q-8qC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PpE-5q-8qC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -98,7 +97,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="送信(メーラー起動)"/>
                                 <connections>
-                                    <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKl-4v-GFN"/>
+                                    <action selector="sendButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g6w-eK-n9D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -166,24 +165,9 @@
                     <view key="view" contentMode="scaleToFill" id="Dad-DA-ohX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lx0-1V-bMs" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="50" width="343" height="468"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Lx0-1V-bMs" firstAttribute="leading" secondItem="Dad-DA-ohX" secondAttribute="leadingMargin" id="5aW-yi-SH1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Lx0-1V-bMs" secondAttribute="trailing" id="KZd-on-Jwk"/>
-                            <constraint firstItem="rjE-F2-fQy" firstAttribute="top" secondItem="Lx0-1V-bMs" secondAttribute="bottom" constant="100" id="bea-di-cSd"/>
-                            <constraint firstItem="Lx0-1V-bMs" firstAttribute="top" secondItem="3Zs-ne-Uue" secondAttribute="bottom" constant="30" id="uTU-4i-DcU"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="qz5-6V-QxZ"/>
-                    <connections>
-                        <outlet property="barChartView" destination="Lx0-1V-bMs" id="ICp-Sx-HM9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3S-Xk-8oU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,7 +224,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ixW-ip-i4l"/>
-                        <segue destination="pZr-Ya-ZG4" kind="relationship" relationship="viewControllers" id="Ij6-py-Cld"/>
                         <segue destination="ySY-KF-JkN" kind="relationship" relationship="viewControllers" id="Mil-ja-mIG"/>
                     </connections>
                 </tabBarController>
