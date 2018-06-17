@@ -19,15 +19,16 @@
 		C645338F20BE239F00F90302 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645338E20BE239F00F90302 /* Security.framework */; };
 		C645339320BE256900F90302 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645339020BE250B00F90302 /* MessageUI.framework */; };
 		C645339720BE25FD00F90302 /* Pods_kintai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645339620BE25FD00F90302 /* Pods_kintai.framework */; };
-		C6569F9120BE702100F9765A /* editTextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9020BE702100F9765A /* editTextTableViewController.swift */; };
+		C6569F9120BE702100F9765A /* EditTextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9020BE702100F9765A /* EditTextTableViewController.swift */; };
 		C6569F9320BE779900F9765A /* messageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9220BE779900F9765A /* messageText.swift */; };
-		C6569F9620BE91E900F9765A /* messageSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9420BE91E900F9765A /* messageSetTableViewCell.swift */; };
+		C6569F9620BE91E900F9765A /* MessageSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9420BE91E900F9765A /* MessageSetTableViewCell.swift */; };
 		C6569F9720BE91E900F9765A /* messageSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */; };
-		C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift */; };
-		C6569F9C20BF642C00F9765A /* addMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9A20BF642C00F9765A /* addMessageViewController.swift */; };
+		C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift */; };
+		C6569F9C20BF642C00F9765A /* AddMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */; };
 		C6569F9D20BF642C00F9765A /* addMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9B20BF642C00F9765A /* addMessageViewController.xib */; };
-		C69486E91D3742CC002458A4 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69486E81D3742CC002458A4 /* chartViewController.swift */; };
+		C69486E91D3742CC002458A4 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69486E81D3742CC002458A4 /* ChartViewController.swift */; };
 		D090C33D2C7169FAC921C66F /* Pods_kintaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3850F0EC12132B12574271 /* Pods_kintaiUITests.framework */; };
+		D4F49ADE20D340CC00115294 /* VoiceShortcutDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */; };
 		D4F9B54A20C97DEC0075DB6E /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F9B54920C97DEC0075DB6E /* CoreSpotlight.framework */; };
 		D4F9B55220C9ADA50075DB6E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F9B55120C9ADA50075DB6E /* IntentHandler.swift */; };
 		D4F9B55A20C9ADA50075DB6E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F9B55920C9ADA50075DB6E /* IntentsUI.framework */; };
@@ -111,15 +112,16 @@
 		C645339020BE250B00F90302 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C645339420BE257100F90302 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C645339620BE25FD00F90302 /* Pods_kintai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_kintai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6569F9020BE702100F9765A /* editTextTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editTextTableViewController.swift; sourceTree = "<group>"; };
+		C6569F9020BE702100F9765A /* EditTextTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextTableViewController.swift; sourceTree = "<group>"; };
 		C6569F9220BE779900F9765A /* messageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageText.swift; sourceTree = "<group>"; };
-		C6569F9420BE91E900F9765A /* messageSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageSetTableViewCell.swift; sourceTree = "<group>"; };
+		C6569F9420BE91E900F9765A /* MessageSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSetTableViewCell.swift; sourceTree = "<group>"; };
 		C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageSetTableViewCell.xib; sourceTree = "<group>"; };
-		C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extension.swift.swift"; sourceTree = "<group>"; };
-		C6569F9A20BF642C00F9765A /* addMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMessageViewController.swift; sourceTree = "<group>"; };
+		C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extension.swift"; sourceTree = "<group>"; };
+		C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
 		C6569F9B20BF642C00F9765A /* addMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addMessageViewController.xib; sourceTree = "<group>"; };
-		C69486E81D3742CC002458A4 /* chartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
+		C69486E81D3742CC002458A4 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		D4DF3B6FE176448B46F350EC /* Pods-kintaiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiTests/Pods-kintaiTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutDataManager.swift; sourceTree = "<group>"; };
 		D4F9B54720C90E050075DB6E /* kintai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kintai.entitlements; sourceTree = "<group>"; };
 		D4F9B54920C97DEC0075DB6E /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		D4F9B54F20C9ADA40075DB6E /* siriKintai.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = siriKintai.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				C62C3F721C567771005E85BA /* kintai */,
+				D4F49ADA20D33FF500115294 /* Shared */,
 				C62C3F871C567771005E85BA /* kintaiTests */,
 				C62C3F921C567772005E85BA /* kintaiUITests */,
 				D4F9B55020C9ADA50075DB6E /* siriKintai */,
@@ -227,21 +230,13 @@
 			isa = PBXGroup;
 			children = (
 				D4F9B54720C90E050075DB6E /* kintai.entitlements */,
-				C62C3F731C567771005E85BA /* AppDelegate.swift */,
-				C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift */,
-				C62C3F751C567771005E85BA /* ViewController.swift */,
-				C69486E81D3742CC002458A4 /* chartViewController.swift */,
-				C6569F9020BE702100F9765A /* editTextTableViewController.swift */,
-				C6569F9220BE779900F9765A /* messageText.swift */,
-				C6569F9A20BF642C00F9765A /* addMessageViewController.swift */,
 				C6569F9B20BF642C00F9765A /* addMessageViewController.xib */,
 				C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */,
 				C62C3F771C567771005E85BA /* Main.storyboard */,
-				C62C3F7A1C567771005E85BA /* Assets.xcassets */,
 				C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */,
-				C6569F9420BE91E900F9765A /* messageSetTableViewCell.swift */,
+				C62C3F7A1C567771005E85BA /* Assets.xcassets */,
 				C62C3F7F1C567771005E85BA /* Info.plist */,
-				D4F9B56F20C9B0A40075DB6E /* Intents.intentdefinition */,
+				D4F49ADC20D3404C00115294 /* UI */,
 			);
 			path = kintai;
 			sourceTree = "<group>";
@@ -262,6 +257,38 @@
 				C62C3F951C567772005E85BA /* Info.plist */,
 			);
 			path = kintaiUITests;
+			sourceTree = "<group>";
+		};
+		D4F49ADA20D33FF500115294 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D4F9B56F20C9B0A40075DB6E /* Intents.intentdefinition */,
+				D4F49ADB20D3401900115294 /* Data */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D4F49ADB20D3401900115294 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D4F49ADC20D3404C00115294 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C6569F9420BE91E900F9765A /* MessageSetTableViewCell.swift */,
+				C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift */,
+				C62C3F751C567771005E85BA /* ViewController.swift */,
+				C69486E81D3742CC002458A4 /* ChartViewController.swift */,
+				C6569F9020BE702100F9765A /* EditTextTableViewController.swift */,
+				C6569F9220BE779900F9765A /* messageText.swift */,
+				C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */,
+				C62C3F731C567771005E85BA /* AppDelegate.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		D4F9B55020C9ADA50075DB6E /* siriKintai */ = {
@@ -312,6 +339,7 @@
 				C62C3F6D1C567771005E85BA /* Frameworks */,
 				C62C3F6E1C567771005E85BA /* Resources */,
 				D4F9B56E20C9ADA50075DB6E /* Embed App Extensions */,
+				D4F49AE020D349DC00115294 /* Run Script(SwiftLint) */,
 			);
 			buildRules = (
 			);
@@ -567,6 +595,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D4F49AE020D349DC00115294 /* Run Script(SwiftLint) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script(SwiftLint)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -576,12 +622,13 @@
 			files = (
 				C62C3F761C567771005E85BA /* ViewController.swift in Sources */,
 				C6569F9320BE779900F9765A /* messageText.swift in Sources */,
-				C69486E91D3742CC002458A4 /* chartViewController.swift in Sources */,
+				C69486E91D3742CC002458A4 /* ChartViewController.swift in Sources */,
 				D4F9B57020C9B0A40075DB6E /* Intents.intentdefinition in Sources */,
-				C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift.swift in Sources */,
-				C6569F9120BE702100F9765A /* editTextTableViewController.swift in Sources */,
-				C6569F9620BE91E900F9765A /* messageSetTableViewCell.swift in Sources */,
-				C6569F9C20BF642C00F9765A /* addMessageViewController.swift in Sources */,
+				C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift in Sources */,
+				C6569F9120BE702100F9765A /* EditTextTableViewController.swift in Sources */,
+				C6569F9620BE91E900F9765A /* MessageSetTableViewCell.swift in Sources */,
+				C6569F9C20BF642C00F9765A /* AddMessageViewController.swift in Sources */,
+				D4F49ADE20D340CC00115294 /* VoiceShortcutDataManager.swift in Sources */,
 				C62C3F741C567771005E85BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@ target 'kintai' do
   # Pods for kintai
 #pod 'Charts'
 #pod 'RealmSwift'
+pod 'SwiftLint' //brewで入れたらいらない
 
 
   target 'kintaiTests' do

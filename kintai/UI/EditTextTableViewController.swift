@@ -9,7 +9,7 @@
 import UIKit
 //import RealmSwift
 
-class editTextTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EditTextTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -53,7 +53,7 @@ class editTextTableViewController: UIViewController, UITableViewDelegate, UITabl
         //        let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier") as! messageSetTableViewCell
         //        print(cell)
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier", for:indexPath) as? messageSetTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier", for:indexPath) as? MessageSetTableViewCell else {
                 fatalError()
             }
             cell.fill(
@@ -68,6 +68,6 @@ class editTextTableViewController: UIViewController, UITableViewDelegate, UITabl
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return messageSetTableViewCell.cellHeight
+        return MessageSetTableViewCell.cellHeight
     }
 }

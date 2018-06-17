@@ -8,7 +8,7 @@
 
 import UIKit
 
-class messageSetTableViewCell: UITableViewCell {
+class MessageSetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     static let cellHeight: CGFloat = 60
