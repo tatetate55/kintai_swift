@@ -1,5 +1,5 @@
 ////
-////  messageText.swift
+////  MessageText.swift
 ////  kintai
 ////
 ////  Created by KAMAKURAKAZUHIRO on 2018/05/30.

@@ -1,6 +1,6 @@
 //
-//  kintaiUITests.swift
-//  kintaiUITests
+//  KintaiUITests.swift
+//  KintaiUITests
 //
 //  Created by KAMAKURAKAZUHIRO on 2016/01/26.
 //  Copyright © 2016年 KAMAKURAKAZUHIRO. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class kintaiUITests: XCTestCase {
+class KintaiUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

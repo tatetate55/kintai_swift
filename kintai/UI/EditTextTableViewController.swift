@@ -1,5 +1,5 @@
 //
-//  editTextTableViewController.swift
+//  EditTextTableViewController.swift
 //  kintai
 //
 //  Created by KAMAKURAKAZUHIRO on 2018/05/30.
@@ -25,8 +25,8 @@ class EditTextTableViewController: UIViewController, UITableViewDelegate, UITabl
         
         // カスタムセルの紐付け
 
-        let nib = UINib(nibName: "messageSetTableViewCell", bundle: nil) // カスタムセルクラス名で`nib`を作成する
-        tableView.register(nib, forCellReuseIdentifier: "messageSetCellIdentifier")
+        let nib = UINib(nibName: "MessageSetTableViewCell", bundle: nil) // カスタムセルクラス名で`nib`を作成する
+        tableView.register(nib, forCellReuseIdentifier: "MessageSetCellIdentifier")
         tableView.reloadData()
     }
 
@@ -50,10 +50,10 @@ class EditTextTableViewController: UIViewController, UITableViewDelegate, UITabl
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier") as! messageSetTableViewCell
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageSetCellIdentifier") as! MessageSetTableViewCell
         //        print(cell)
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageSetCellIdentifier", for:indexPath) as? MessageSetTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageSetCellIdentifier", for:indexPath) as? MessageSetTableViewCell else {
                 fatalError()
             }
             cell.fill(

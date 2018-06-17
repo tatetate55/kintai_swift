@@ -1,5 +1,5 @@
 //
-//  addMessageViewController.swift
+//  AddMessageViewController.swift
 //  kintai
 //
 //  Created by KAMAKURAKAZUHIRO on 2018/05/31.

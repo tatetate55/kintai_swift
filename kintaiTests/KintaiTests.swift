@@ -9,7 +9,7 @@
 import XCTest
 @testable import kintai
 
-class kintaiTests: XCTestCase {
+class KintaiTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
