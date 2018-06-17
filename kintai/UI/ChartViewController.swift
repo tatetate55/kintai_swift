@@ -1,5 +1,5 @@
 //
-//  chartViewController.swift
+//  ChartViewController.swift
 //  kintai
 //
 //  Created by KAMAKURAKAZUHIRO on 2016/07/14.
@@ -9,7 +9,7 @@
 import UIKit
 //import Charts
 
-class chartViewController: UIViewController {
+class ChartViewController: UIViewController {
     // storyboardから接続
  //   @IBOutlet weak var barChartView: BarChartView!
     var weekArray: [Double] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
@@ -17,16 +17,17 @@ class chartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//
+//        // 「ud」というインスタンスをつくる。
+//        let ud = UserDefaults.standard
+//
+//        if ud.object(forKey: "udWeek") != nil {
+//            let udWeek : [Double] = ud.object(forKey: "udWeek") as! [Double]
+//            weekArray = udWeek
+    }
+}
         
-        // 「ud」というインスタンスをつくる。
-        let ud = UserDefaults.standard
-
-        if ud.object(forKey: "udWeek") != nil {
-            let udWeek : [Double] = ud.object(forKey: "udWeek") as! [Double]
-            weekArray = udWeek
-        }
-        
-        months = ["日","月","火","水","木","金","土"]
+      //  months = ["日","月","火","水","木","金","土"]
 //        let unitsSold = weekArray//[5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 //        
 //        barChartView.animate(yAxisDuration: 2.0)
@@ -36,12 +37,12 @@ class chartViewController: UIViewController {
 //      //  barChartView.description = "アプリ起動曜日"
         
   //      setChart(dataPoints: months, values: unitsSold)
-    }
+
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//    }
+
 //    func setChart(dataPoints: [String], values: [Double]) {
 //        barChartView.noDataText = "You need to provide data for the chart."
 //
@@ -56,4 +57,3 @@ class chartViewController: UIViewController {
 //        let chartData = BarChartData(xVals: months, dataSet: chartDataSet)
 //        barChartView.data = chartData
 //    }
-}
