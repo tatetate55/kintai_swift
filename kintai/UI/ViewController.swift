@@ -57,7 +57,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         //        }
         // キーがidの値をとります。
         if let udTo = userDefault.object(forKey: "udTo") as? String {
-            //            let udTo : String = userDefaultTo as! String
             toText.text = udTo
         }
         if let udCc = userDefault.object(forKey: "udCc") as? String {
@@ -69,7 +68,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         if let udBoss = userDefault.object(forKey: "udBoss") as? String {
             bossName.text = udBoss
         }
-        
         let date: NSDate = NSDate()
         let cal: NSCalendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
         let dateComp: NSDateComponents = cal.components(
@@ -79,7 +77,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         // キーidの値を削除
         //ud.removeObjectForKey("id")
         createTitle(myName: myName.text!, dateCate: "午前半休")
-        createMainText(myName: myName.text!, bossName: bossName.text!,dateCate: "午前半休")
+        createMainText(myName: myName.text!, bossName: bossName.text!, dateCate: "午前半休")
         
         // Do any additional setup after loading the view, typically from a nib.
         // selfをデリゲートにする
@@ -87,7 +85,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         ccText.delegate = self
         myName.delegate = self
         bossName.delegate = self
-        
+
         //        //最後にセグメント追加
         //        var messageTitleArray:[String] = []
         //        for message in messageArray {
@@ -95,11 +93,11 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         //        }
         //        switchVacation.changeAllSegmentWithArray(arr: messageTitleArray)
     }
-    
+
     @IBAction func changeKishoSegment(sender: UISegmentedControl) {
         vacationType = sender.selectedSegmentIndex
     }
-    
+
     @IBAction func saveButton(sender: AnyObject) {
         // udに保存をする
         let userDefault = UserDefaults.standard
@@ -115,9 +113,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
             createTitle(myName: myName.text!, dateCate:"午前半休")
             createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"全休")
         }
-        
     }
-    
+
     func saveAction() {
         // udに保存をする
         let ud = UserDefaults.standard
@@ -165,57 +162,53 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         } else {
             mailViewController.setToRecipients([toRecipients]) //Toアドレスの表示
         }
-        
+
         if ccRecipients.contains(",") {
             let ccAddressArray = ccRecipients.components(separatedBy: ",")
             mailViewController.setCcRecipients(ccAddressArray) //ccアドレスの表示
         } else {
             mailViewController.setCcRecipients([ccRecipients]) //Ccアドレスの表示
         }
-        
+
         mailViewController.setMessageBody(mainTexts, isHTML: false)
         self.present(mailViewController, animated: true, completion: nil)
     }
-    
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     // selfをデリゲートにしているので、ここにデリゲートメソッドを書く
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-    
-    
+
     // タイトルを作成
     func createTitle(myName: String, dateCate: String ) {
-        
+
         let dateFormatter = DateFormatter()                                   // フォーマットの取得
         dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale?  // JPロケール
         dateFormatter.dateFormat = "MM/dd"         // フォーマットの指定
         print(dateFormatter.string(from: NSDate() as Date))
         titleLabel.text = "【勤怠】\(dateFormatter.string(from: NSDate() as Date)) \(myName)　\(dateCate)";
     }
-    
+
     func createMainText(myName: String, bossName: String, dateCate: String) {
         
         
         titleLabel.text = "今日休む"//messageArray[vacationType].title
         mainText.text = "hogeさんお疲れ様です。\n本日体調不良のため\n全休を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。" //messageArray[vacationType].message //
     }
-    
+
     @IBAction func tapScreen(sender: AnyObject) {
         self.view.endEditing(true)
     }
-    
+
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
+
     func addSiriDonate() {
         // How to donate a shortcut
         let userActivity = NSUserActivity(activityType: "com.kintai.siri")

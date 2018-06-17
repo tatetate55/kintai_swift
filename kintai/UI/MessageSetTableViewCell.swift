@@ -12,7 +12,7 @@ class MessageSetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     static let cellHeight: CGFloat = 60
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
