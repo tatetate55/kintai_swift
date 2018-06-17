@@ -1,6 +1,6 @@
 //
-//  kintaiTests.swift
-//  kintaiTests
+//  KintaiTests.swift
+//  KintaiTests
 //
 //  Created by KAMAKURAKAZUHIRO on 2016/01/26.
 //  Copyright © 2016年 KAMAKURAKAZUHIRO. All rights reserved.

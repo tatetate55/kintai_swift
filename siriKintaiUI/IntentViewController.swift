@@ -25,6 +25,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
     // MARK: - INUIHostedViewControlling
     
     // Prepare your view controller for the interaction to handle.
+    // swiftlint:disable line_length
     func configureView(for parameters: Set<INParameter>, of interaction: INInteraction, interactiveBehavior: INUIInteractiveBehavior, context: INUIHostedViewContext, completion: @escaping (Bool, Set<INParameter>, CGSize) -> Void) {
         // Do configuration here, including preparing views and calculating a desired size for presentation.
         completion(true, parameters, self.desiredSize)

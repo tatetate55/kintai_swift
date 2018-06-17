@@ -13,8 +13,8 @@
 		C62C3F791C567771005E85BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C3F771C567771005E85BA /* Main.storyboard */; };
 		C62C3F7B1C567771005E85BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62C3F7A1C567771005E85BA /* Assets.xcassets */; };
 		C62C3F7E1C567771005E85BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */; };
-		C62C3F891C567771005E85BA /* kintaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F881C567771005E85BA /* kintaiTests.swift */; };
-		C62C3F941C567772005E85BA /* kintaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F931C567772005E85BA /* kintaiUITests.swift */; };
+		C62C3F891C567771005E85BA /* KintaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F881C567771005E85BA /* KintaiTests.swift */; };
+		C62C3F941C567772005E85BA /* KintaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C3F931C567772005E85BA /* KintaiUITests.swift */; };
 		C645338B20BE239000F90302 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645338A20BE239000F90302 /* SystemConfiguration.framework */; };
 		C645338F20BE239F00F90302 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645338E20BE239F00F90302 /* Security.framework */; };
 		C645339320BE256900F90302 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645339020BE250B00F90302 /* MessageUI.framework */; };
@@ -22,10 +22,10 @@
 		C6569F9120BE702100F9765A /* EditTextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9020BE702100F9765A /* EditTextTableViewController.swift */; };
 		C6569F9320BE779900F9765A /* messageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9220BE779900F9765A /* messageText.swift */; };
 		C6569F9620BE91E900F9765A /* MessageSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9420BE91E900F9765A /* MessageSetTableViewCell.swift */; };
-		C6569F9720BE91E900F9765A /* messageSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */; };
+		C6569F9720BE91E900F9765A /* MessageSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9520BE91E900F9765A /* MessageSetTableViewCell.xib */; };
 		C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift */; };
 		C6569F9C20BF642C00F9765A /* AddMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */; };
-		C6569F9D20BF642C00F9765A /* addMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9B20BF642C00F9765A /* addMessageViewController.xib */; };
+		C6569F9D20BF642C00F9765A /* AddMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9B20BF642C00F9765A /* AddMessageViewController.xib */; };
 		C69486E91D3742CC002458A4 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69486E81D3742CC002458A4 /* ChartViewController.swift */; };
 		D090C33D2C7169FAC921C66F /* Pods_kintaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3850F0EC12132B12574271 /* Pods_kintaiUITests.framework */; };
 		D4F49ADE20D340CC00115294 /* VoiceShortcutDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */; };
@@ -102,10 +102,10 @@
 		C62C3F7D1C567771005E85BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62C3F7F1C567771005E85BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C62C3F841C567771005E85BA /* kintaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kintaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C62C3F881C567771005E85BA /* kintaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kintaiTests.swift; sourceTree = "<group>"; };
+		C62C3F881C567771005E85BA /* KintaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KintaiTests.swift; sourceTree = "<group>"; };
 		C62C3F8A1C567771005E85BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C62C3F8F1C567771005E85BA /* kintaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kintaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C62C3F931C567772005E85BA /* kintaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kintaiUITests.swift; sourceTree = "<group>"; };
+		C62C3F931C567772005E85BA /* KintaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KintaiUITests.swift; sourceTree = "<group>"; };
 		C62C3F951C567772005E85BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C645338A20BE239000F90302 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C645338E20BE239F00F90302 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -115,10 +115,10 @@
 		C6569F9020BE702100F9765A /* EditTextTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextTableViewController.swift; sourceTree = "<group>"; };
 		C6569F9220BE779900F9765A /* messageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageText.swift; sourceTree = "<group>"; };
 		C6569F9420BE91E900F9765A /* MessageSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSetTableViewCell.swift; sourceTree = "<group>"; };
-		C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageSetTableViewCell.xib; sourceTree = "<group>"; };
+		C6569F9520BE91E900F9765A /* MessageSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSetTableViewCell.xib; sourceTree = "<group>"; };
 		C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extension.swift"; sourceTree = "<group>"; };
 		C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
-		C6569F9B20BF642C00F9765A /* addMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addMessageViewController.xib; sourceTree = "<group>"; };
+		C6569F9B20BF642C00F9765A /* AddMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMessageViewController.xib; sourceTree = "<group>"; };
 		C69486E81D3742CC002458A4 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		D4DF3B6FE176448B46F350EC /* Pods-kintaiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiTests/Pods-kintaiTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutDataManager.swift; sourceTree = "<group>"; };
@@ -230,8 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				D4F9B54720C90E050075DB6E /* kintai.entitlements */,
-				C6569F9B20BF642C00F9765A /* addMessageViewController.xib */,
-				C6569F9520BE91E900F9765A /* messageSetTableViewCell.xib */,
+				C6569F9B20BF642C00F9765A /* AddMessageViewController.xib */,
+				C6569F9520BE91E900F9765A /* MessageSetTableViewCell.xib */,
 				C62C3F771C567771005E85BA /* Main.storyboard */,
 				C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */,
 				C62C3F7A1C567771005E85BA /* Assets.xcassets */,
@@ -244,7 +244,7 @@
 		C62C3F871C567771005E85BA /* kintaiTests */ = {
 			isa = PBXGroup;
 			children = (
-				C62C3F881C567771005E85BA /* kintaiTests.swift */,
+				C62C3F881C567771005E85BA /* KintaiTests.swift */,
 				C62C3F8A1C567771005E85BA /* Info.plist */,
 			);
 			path = kintaiTests;
@@ -253,7 +253,7 @@
 		C62C3F921C567772005E85BA /* kintaiUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C62C3F931C567772005E85BA /* kintaiUITests.swift */,
+				C62C3F931C567772005E85BA /* KintaiUITests.swift */,
 				C62C3F951C567772005E85BA /* Info.plist */,
 			);
 			path = kintaiUITests;
@@ -340,6 +340,7 @@
 				C62C3F6E1C567771005E85BA /* Resources */,
 				D4F9B56E20C9ADA50075DB6E /* Embed App Extensions */,
 				D4F49AE020D349DC00115294 /* Run Script(SwiftLint) */,
+				D4550CD120D642CD00304CF9 /* Run Script() */,
 			);
 			buildRules = (
 			);
@@ -489,8 +490,8 @@
 				C62C3F7E1C567771005E85BA /* LaunchScreen.storyboard in Resources */,
 				C62C3F7B1C567771005E85BA /* Assets.xcassets in Resources */,
 				C62C3F791C567771005E85BA /* Main.storyboard in Resources */,
-				C6569F9720BE91E900F9765A /* messageSetTableViewCell.xib in Resources */,
-				C6569F9D20BF642C00F9765A /* addMessageViewController.xib in Resources */,
+				C6569F9720BE91E900F9765A /* MessageSetTableViewCell.xib in Resources */,
+				C6569F9D20BF642C00F9765A /* AddMessageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +596,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D4550CD120D642CD00304CF9 /* Run Script() */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script()";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
 		D4F49AE020D349DC00115294 /* Run Script(SwiftLint) */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -637,7 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C62C3F891C567771005E85BA /* kintaiTests.swift in Sources */,
+				C62C3F891C567771005E85BA /* KintaiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +664,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C62C3F941C567772005E85BA /* kintaiUITests.swift in Sources */,
+				C62C3F941C567772005E85BA /* KintaiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

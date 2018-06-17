@@ -19,12 +19,10 @@ class EditTextTableViewController: UIViewController, UITableViewDelegate, UITabl
 //
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         
         // カスタムセルの紐付け
-
         let nib = UINib(nibName: "MessageSetTableViewCell", bundle: nil) // カスタムセルクラス名で`nib`を作成する
         tableView.register(nib, forCellReuseIdentifier: "MessageSetCellIdentifier")
         tableView.reloadData()
