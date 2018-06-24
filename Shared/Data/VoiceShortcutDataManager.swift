@@ -11,9 +11,9 @@ import Intents
 import os.log
 
 public class VoiceShortcutDataManager {
-    
+
     private var voiceShortcuts: [INVoiceShortcut] = []
-    
+
     public init() {
         updateVoiceShortcuts(completion: nil)
     }
@@ -28,7 +28,7 @@ public class VoiceShortcutDataManager {
 //        }
 //        return voiceShorcut
 //    }
-    
+
     public func updateVoiceShortcuts(completion: (() -> Void)?) {
         INVoiceShortcutCenter.shared.getAllVoiceShortcuts { (voiceShortcutsFromCenter, error) in
             guard let voiceShortcutsFromCenter = voiceShortcutsFromCenter else {

@@ -6,9 +6,10 @@ use_frameworks!
 target 'kintai' do
 
   # Pods for kintai
+pod 'mailcore2-ios'
 #pod 'Charts'
 #pod 'RealmSwift'
-pod 'SwiftLint' //brewで入れたらいらない
+#pod 'SwiftLint'
 
 
   target 'kintaiTests' do

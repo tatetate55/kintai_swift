@@ -16,23 +16,34 @@ import IntentsUI
 // "Send a message using <myApp>"
 
 class IntentViewController: UIViewController, INUIHostedViewControlling {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-        
+
+    @IBOutlet var sendMessageView: SendMailView!
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//    }
+
     // MARK: - INUIHostedViewControlling
-    
+
     // Prepare your view controller for the interaction to handle.
     // swiftlint:disable line_length
     func configureView(for parameters: Set<INParameter>, of interaction: INInteraction, interactiveBehavior: INUIInteractiveBehavior, context: INUIHostedViewContext, completion: @escaping (Bool, Set<INParameter>, CGSize) -> Void) {
+        
         // Do configuration here, including preparing views and calculating a desired size for presentation.
-        completion(true, parameters, self.desiredSize)
+
+        //追加
+        view.addSubview(sendMessageView)
+        let width = self.extensionContext?.hostedViewMaximumAllowedSize.width ?? 320
+        let frame = CGRect(origin: .zero, size: CGSize(width: width, height: 170))
+        sendMessageView.frame = frame
+
+        var desiredSize = CGSize.zero
+        desiredSize = frame.size
+        completion(true, parameters, desiredSize)
+
     }
-    
-    var desiredSize: CGSize {
-        return self.extensionContext!.hostedViewMaximumAllowedSize
-    }
-    
+
+//    var desiredSize: CGSize {
+//        return self.extensionContext!.hostedViewMaximumAllowedSize
+//    }
 }

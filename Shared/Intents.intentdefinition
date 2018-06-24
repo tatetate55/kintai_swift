@@ -18,33 +18,46 @@
 			<key>INIntentCategory</key>
 			<string>share</string>
 			<key>INIntentDescription</key>
-			<string>send mail</string>
+			<string>メッセージを直接送るぜ</string>
 			<key>INIntentDescriptionID</key>
 			<string>3KsUSk</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>1</integer>
+			<integer>7</integer>
 			<key>INIntentName</key>
 			<string>SendMail</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key></key>
+				<key>name</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
-					<true/>
+					<false/>
 					<key>INIntentParameterCombinationSubtitle</key>
 					<string></string>
 					<key>INIntentParameterCombinationSubtitleID</key>
-					<string>C1MtDF</string>
+					<string>GnC29z</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string></string>
+					<string>${name}に直接メールを送る</string>
 					<key>INIntentParameterCombinationTitleID</key>
-					<string>JDvD7r</string>
+					<string>YzWikK</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
-			<array/>
+			<array>
+				<dict>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterName</key>
+					<string>name</string>
+					<key>INIntentParameterSupportsMultipleValues</key>
+					<false/>
+					<key>INIntentParameterTag</key>
+					<integer>6</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+			</array>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>
@@ -61,7 +74,7 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string></string>
+						<string>了解です！</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>NxoYLF</string>
 						<key>INIntentResponseCodeName</key>
@@ -71,20 +84,20 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>1</integer>
+				<integer>3</integer>
 				<key>INIntentResponseParameters</key>
 				<array/>
 			</dict>
 			<key>INIntentRestrictions</key>
 			<integer>0</integer>
 			<key>INIntentTitle</key>
-			<string>sendMail</string>
+			<string>直接メッセージを送る！！</string>
 			<key>INIntentTitleID</key>
 			<string>NZuqpP</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentUserConfirmationRequired</key>
-			<false/>
+			<true/>
 			<key>INIntentVerb</key>
 			<string>Send</string>
 		</dict>

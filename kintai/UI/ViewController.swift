@@ -12,6 +12,7 @@ import Intents
 import IntentsUI
 import CoreSpotlight
 import MobileCoreServices
+import UserNotifications
 //import RealmSwift
 
 var vacationType: Int = 0 //　休みの種類
@@ -32,7 +33,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+        }
+        push()
         addSiriDonate()
         // 「userDefault」というインスタンスをつくる。
         let userDefault = UserDefaults.standard
@@ -131,29 +135,27 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
             createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"全休")
         }
     }
-    
+
     @IBAction func sendButton(sender: AnyObject) {
         // mailCore
-        
+
         let intent = SendMailIntent()
         let interaction = INInteraction(intent: intent, response: nil)
         interaction.donate() { _ in
             print("Donated!")
         }
-        
-        
+
         self.saveAction()
         //メールを送信できるかチェック
         if MFMailComposeViewController.canSendMail() == false {
             print("Email Send Failed")
             return
         }
-        
+
         let mailViewController = MFMailComposeViewController()
         let toRecipients = self.toText.text!
         let ccRecipients =  self.ccText.text!
         let mainTexts:String = self.mainText.text!
-        
         mailViewController.mailComposeDelegate = self
         mailViewController.setSubject(self.titleLabel.text!)
         if toRecipients.contains(",") {
@@ -219,13 +221,12 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         userActivity.isEligibleForSearch = true
         userActivity.isEligibleForPrediction = true
         userActivity.suggestedInvocationPhrase = "今日休む"
-        
+
         let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
         let image = UIImage(named: "beach")!
         attributes.thumbnailData = image.pngData()
         attributes.contentDescription = "siriからアプリを起動して素早く休もう！"
         userActivity.contentAttributeSet = attributes
-        
         self.userActivity = userActivity
     }
 }
@@ -238,5 +239,38 @@ extension UISegmentedControl {
         }
         self.selectedSegmentIndex = 0
     }
-    
+}
+
+extension ViewController {
+    func push() {
+        let seconds = 1
+
+        // ------------------------------------
+        // 通知の発行: タイマーを指定して発行
+        // ------------------------------------
+
+        // content
+        let content = UNMutableNotificationContent()
+        content.title = "It's time."
+        content.subtitle = "\(seconds) seconds elapsed!"
+        content.body = "I told you now because you had set \(seconds) seconds before."
+        content.sound = UNNotificationSound.default
+
+        // trigger
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(seconds),
+                                                        repeats: false)
+
+        // request includes content & trigger
+        let request = UNNotificationRequest(identifier: "TIMER\(seconds)",
+            content: content,
+            trigger: trigger)
+
+        // schedule notification by adding request to notification center
+        let center = UNUserNotificationCenter.current()
+        center.add(request) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

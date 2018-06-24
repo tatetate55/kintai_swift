@@ -28,6 +28,7 @@
 		C6569F9D20BF642C00F9765A /* AddMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9B20BF642C00F9765A /* AddMessageViewController.xib */; };
 		C69486E91D3742CC002458A4 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69486E81D3742CC002458A4 /* ChartViewController.swift */; };
 		D090C33D2C7169FAC921C66F /* Pods_kintaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3850F0EC12132B12574271 /* Pods_kintaiUITests.framework */; };
+		D4E3926D20D7EC1F00875829 /* SendMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3926C20D7EC1F00875829 /* SendMailView.swift */; };
 		D4F49ADE20D340CC00115294 /* VoiceShortcutDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */; };
 		D4F9B54A20C97DEC0075DB6E /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F9B54920C97DEC0075DB6E /* CoreSpotlight.framework */; };
 		D4F9B55220C9ADA50075DB6E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F9B55120C9ADA50075DB6E /* IntentHandler.swift */; };
@@ -120,7 +121,11 @@
 		C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
 		C6569F9B20BF642C00F9765A /* AddMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMessageViewController.xib; sourceTree = "<group>"; };
 		C69486E81D3742CC002458A4 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		D43E1D3920D804800036B84A /* kintai-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kintai-Bridging-Header.h"; sourceTree = "<group>"; };
 		D4DF3B6FE176448B46F350EC /* Pods-kintaiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiTests/Pods-kintaiTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4E3926C20D7EC1F00875829 /* SendMailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailView.swift; sourceTree = "<group>"; };
+		D4E3926E20D7EEE900875829 /* siriKintaiUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = siriKintaiUI.entitlements; sourceTree = "<group>"; };
+		D4E3926F20D7EEF000875829 /* siriKintai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = siriKintai.entitlements; sourceTree = "<group>"; };
 		D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutDataManager.swift; sourceTree = "<group>"; };
 		D4F9B54720C90E050075DB6E /* kintai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kintai.entitlements; sourceTree = "<group>"; };
 		D4F9B54920C97DEC0075DB6E /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
@@ -202,14 +207,15 @@
 		C62C3F671C567771005E85BA = {
 			isa = PBXGroup;
 			children = (
+				D43E1D3920D804800036B84A /* kintai-Bridging-Header.h */,
 				C62C3F721C567771005E85BA /* kintai */,
 				D4F49ADA20D33FF500115294 /* Shared */,
-				C62C3F871C567771005E85BA /* kintaiTests */,
-				C62C3F921C567772005E85BA /* kintaiUITests */,
 				D4F9B55020C9ADA50075DB6E /* siriKintai */,
 				D4F9B55B20C9ADA50075DB6E /* siriKintaiUI */,
 				C62C3F711C567771005E85BA /* Products */,
 				36C54AA74815815DC180EBF3 /* Pods */,
+				C62C3F871C567771005E85BA /* kintaiTests */,
+				C62C3F921C567772005E85BA /* kintaiUITests */,
 				ED6A7E2DAB67ADA0B11BD20A /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 		D4F9B55020C9ADA50075DB6E /* siriKintai */ = {
 			isa = PBXGroup;
 			children = (
+				D4E3926F20D7EEF000875829 /* siriKintai.entitlements */,
 				D4F9B55120C9ADA50075DB6E /* IntentHandler.swift */,
 				D4F9B55320C9ADA50075DB6E /* Info.plist */,
 			);
@@ -303,7 +310,9 @@
 		D4F9B55B20C9ADA50075DB6E /* siriKintaiUI */ = {
 			isa = PBXGroup;
 			children = (
+				D4E3926E20D7EEE900875829 /* siriKintaiUI.entitlements */,
 				D4F9B55C20C9ADA50075DB6E /* IntentViewController.swift */,
+				D4E3926C20D7EC1F00875829 /* SendMailView.swift */,
 				D4F9B55E20C9ADA50075DB6E /* MainInterface.storyboard */,
 				D4F9B56120C9ADA50075DB6E /* Info.plist */,
 			);
@@ -442,6 +451,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
 							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
 						};
 					};
 					C62C3F831C567771005E85BA = {
@@ -454,9 +466,19 @@
 					};
 					D4F9B54E20C9ADA40075DB6E = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D4F9B55720C9ADA50075DB6E = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -682,6 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4F9B55D20C9ADA50075DB6E /* IntentViewController.swift in Sources */,
+				D4E3926D20D7EC1F00875829 /* SendMailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +852,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kintai/kintai.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -843,6 +867,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -854,6 +879,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kintai/kintai.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -869,6 +895,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1048,6 +1075,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = siriKintai/siriKintai.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1066,6 +1094,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1090,6 +1119,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = siriKintai/siriKintai.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1106,6 +1136,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
