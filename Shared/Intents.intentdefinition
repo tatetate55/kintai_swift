@@ -18,7 +18,7 @@
 			<key>INIntentCategory</key>
 			<string>share</string>
 			<key>INIntentDescription</key>
-			<string>メッセージを直接送るぜ</string>
+			<string>メッセージを直接送ります</string>
 			<key>INIntentDescriptionID</key>
 			<string>3KsUSk</string>
 			<key>INIntentLastParameterTag</key>
@@ -38,7 +38,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>${name}に直接メールを送る</string>
+					<string>直接メールを送る</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>YzWikK</string>
 				</dict>
@@ -91,7 +91,7 @@
 			<key>INIntentRestrictions</key>
 			<integer>0</integer>
 			<key>INIntentTitle</key>
-			<string>直接メッセージを送る！！</string>
+			<string>直接メッセージを送る</string>
 			<key>INIntentTitleID</key>
 			<string>NZuqpP</string>
 			<key>INIntentType</key>

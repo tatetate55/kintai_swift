@@ -8,7 +8,7 @@ target 'kintai' do
   # Pods for kintai
 pod 'mailcore2-ios'
 #pod 'Charts'
-#pod 'RealmSwift'
+pod 'RealmSwift' 
 #pod 'SwiftLint'
 
 

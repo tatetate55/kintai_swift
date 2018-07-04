@@ -13,7 +13,7 @@ import IntentsUI
 import CoreSpotlight
 import MobileCoreServices
 import UserNotifications
-//import RealmSwift
+import RealmSwift
 
 var vacationType: Int = 0 //　休みの種類
 
@@ -24,13 +24,12 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     @IBOutlet weak var bossName: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainText: UITextView!
-    
+
     //    let realm = try! Realm()
     // DB
     //    var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
     
     @IBOutlet weak var switchVacation: UISegmentedControl!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let center = UNUserNotificationCenter.current()
@@ -111,11 +110,11 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         userDefault.set(bossName.text, forKey: "udBoss")
         // キーidの値を削除ud.removeObjectForKey("id")
         if vacationType == 1 {
-            createTitle(myName: myName.text!, dateCate:"午前半休")
-            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"午前半休")
+            createTitle(myName: myName.text!, dateCate: "午前半休")
+            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate: "午前半休")
         } else {
-            createTitle(myName: myName.text!, dateCate:"午前半休")
-            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"全休")
+            createTitle(myName: myName.text!, dateCate: "午前半休")
+            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate: "全休")
         }
     }
 
@@ -197,8 +196,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     }
 
     func createMainText(myName: String, bossName: String, dateCate: String) {
-        
-        
         titleLabel.text = "今日休む"//messageArray[vacationType].title
         mainText.text = "hogeさんお疲れ様です。\n本日体調不良のため\n全休を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。" //messageArray[vacationType].message //
     }

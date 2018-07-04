@@ -1,16 +1,26 @@
 PODS:
-  - SwiftLint (0.25.1)
+  - mailcore2-ios (0.6.4)
+  - Realm (3.7.4):
+    - Realm/Headers (= 3.7.4)
+  - Realm/Headers (3.7.4)
+  - RealmSwift (3.7.4):
+    - Realm (= 3.7.4)
 
 DEPENDENCIES:
-  - SwiftLint
+  - mailcore2-ios
+  - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - SwiftLint
+    - mailcore2-ios
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
-  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+  mailcore2-ios: 3ff0be2fa553d4da9c11d39c11d51863c768f24f
+  Realm: a469bb59e33f9926102ccaea4349822c53b9117e
+  RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
 
-PODFILE CHECKSUM: f206e897079ac63b3c906c4da1431ae523c742d4
+PODFILE CHECKSUM: 2effa6777afec1fdd17220ad771605471a00e56f
 
 COCOAPODS: 1.5.3

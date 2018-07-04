@@ -4,7 +4,7 @@
 //
 //  Created by KAMAKURAKAZUHIRO on 2018/05/30.
 //  Copyright © 2018年 KAMAKURAKAZUHIRO. All rights reserved.
-//
+
 //import UIKit
 //
 //extension UISegmentedControl {
@@ -15,5 +15,5 @@
 //        }
 //        self.selectedSegmentIndex = 0
 //    }
-//    
+//
 //}

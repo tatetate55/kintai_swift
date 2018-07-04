@@ -235,6 +235,7 @@
 		C62C3F721C567771005E85BA /* kintai */ = {
 			isa = PBXGroup;
 			children = (
+				C62C3F731C567771005E85BA /* AppDelegate.swift */,
 				D4F9B54720C90E050075DB6E /* kintai.entitlements */,
 				C6569F9B20BF642C00F9765A /* AddMessageViewController.xib */,
 				C6569F9520BE91E900F9765A /* MessageSetTableViewCell.xib */,
@@ -242,6 +243,7 @@
 				C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */,
 				C62C3F7A1C567771005E85BA /* Assets.xcassets */,
 				C62C3F7F1C567771005E85BA /* Info.plist */,
+				D448333020EC71A6005FBE1A /* Data */,
 				D4F49ADC20D3404C00115294 /* UI */,
 			);
 			path = kintai;
@@ -263,6 +265,13 @@
 				C62C3F951C567772005E85BA /* Info.plist */,
 			);
 			path = kintaiUITests;
+			sourceTree = "<group>";
+		};
+		D448333020EC71A6005FBE1A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D4F49ADA20D33FF500115294 /* Shared */ = {
@@ -292,7 +301,6 @@
 				C6569F9020BE702100F9765A /* EditTextTableViewController.swift */,
 				C6569F9220BE779900F9765A /* messageText.swift */,
 				C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */,
-				C62C3F731C567771005E85BA /* AppDelegate.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 				D4F9B56E20C9ADA50075DB6E /* Embed App Extensions */,
 				D4F49AE020D349DC00115294 /* Run Script(SwiftLint) */,
 				D4550CD120D642CD00304CF9 /* Run Script() */,
+				521A52D257F22DEC3253412D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -567,6 +576,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		521A52D257F22DEC3253412D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-kintai/Pods-kintai-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kintai/Pods-kintai-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		590D608B4B8315F75B7FA3FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -623,13 +652,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = "Run Script()";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,18 +666,14 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = "Run Script(SwiftLint)";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n${PODS_ROOT}/SwiftLint/swiftlintelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
