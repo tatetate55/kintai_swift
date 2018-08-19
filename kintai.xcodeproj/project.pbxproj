@@ -20,7 +20,7 @@
 		C645339320BE256900F90302 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645339020BE250B00F90302 /* MessageUI.framework */; };
 		C645339720BE25FD00F90302 /* Pods_kintai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645339620BE25FD00F90302 /* Pods_kintai.framework */; };
 		C6569F9120BE702100F9765A /* EditTextTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9020BE702100F9765A /* EditTextTableViewController.swift */; };
-		C6569F9320BE779900F9765A /* messageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9220BE779900F9765A /* messageText.swift */; };
+		C6569F9320BE779900F9765A /* MessageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9220BE779900F9765A /* MessageText.swift */; };
 		C6569F9620BE91E900F9765A /* MessageSetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9420BE91E900F9765A /* MessageSetTableViewCell.swift */; };
 		C6569F9720BE91E900F9765A /* MessageSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9520BE91E900F9765A /* MessageSetTableViewCell.xib */; };
 		C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift */; };
@@ -28,17 +28,10 @@
 		C6569F9D20BF642C00F9765A /* AddMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6569F9B20BF642C00F9765A /* AddMessageViewController.xib */; };
 		C69486E91D3742CC002458A4 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69486E81D3742CC002458A4 /* ChartViewController.swift */; };
 		D090C33D2C7169FAC921C66F /* Pods_kintaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3850F0EC12132B12574271 /* Pods_kintaiUITests.framework */; };
-		D4E3926D20D7EC1F00875829 /* SendMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3926C20D7EC1F00875829 /* SendMailView.swift */; };
-		D4F49ADE20D340CC00115294 /* VoiceShortcutDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */; };
+		D42C6C7120EDFB4600A853D6 /* BaseUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C6C7020EDFB4600A853D6 /* BaseUserDefault.swift */; };
+		D42C6C7520EDFC4D00A853D6 /* ToAddressUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C6C7420EDFC4D00A853D6 /* ToAddressUserDefault.swift */; };
+		D42C6C7720EDFD1D00A853D6 /* CcAddressUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C6C7620EDFD1D00A853D6 /* CcAddressUserDefault.swift */; };
 		D4F9B54A20C97DEC0075DB6E /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F9B54920C97DEC0075DB6E /* CoreSpotlight.framework */; };
-		D4F9B55220C9ADA50075DB6E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F9B55120C9ADA50075DB6E /* IntentHandler.swift */; };
-		D4F9B55A20C9ADA50075DB6E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F9B55920C9ADA50075DB6E /* IntentsUI.framework */; };
-		D4F9B55D20C9ADA50075DB6E /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F9B55C20C9ADA50075DB6E /* IntentViewController.swift */; };
-		D4F9B56020C9ADA50075DB6E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F9B55E20C9ADA50075DB6E /* MainInterface.storyboard */; };
-		D4F9B56420C9ADA50075DB6E /* siriKintaiUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4F9B55820C9ADA50075DB6E /* siriKintaiUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4F9B56720C9ADA50075DB6E /* siriKintai.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4F9B54F20C9ADA40075DB6E /* siriKintai.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4F9B57020C9B0A40075DB6E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D4F9B56F20C9B0A40075DB6E /* Intents.intentdefinition */; };
-		D4F9B57120C9B11A0075DB6E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = D4F9B56F20C9B0A40075DB6E /* Intents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,20 +49,6 @@
 			remoteGlobalIDString = C62C3F6F1C567771005E85BA;
 			remoteInfo = kintai;
 		};
-		D4F9B56220C9ADA50075DB6E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C62C3F681C567771005E85BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4F9B55720C9ADA50075DB6E;
-			remoteInfo = siriKintaiUI;
-		};
-		D4F9B56520C9ADA50075DB6E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C62C3F681C567771005E85BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4F9B54E20C9ADA40075DB6E;
-			remoteInfo = siriKintai;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,8 +58,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D4F9B56420C9ADA50075DB6E /* siriKintaiUI.appex in Embed App Extensions */,
-				D4F9B56720C9ADA50075DB6E /* siriKintai.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,30 +91,21 @@
 		C645339420BE257100F90302 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C645339620BE25FD00F90302 /* Pods_kintai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_kintai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6569F9020BE702100F9765A /* EditTextTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextTableViewController.swift; sourceTree = "<group>"; };
-		C6569F9220BE779900F9765A /* messageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageText.swift; sourceTree = "<group>"; };
+		C6569F9220BE779900F9765A /* MessageText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageText.swift; sourceTree = "<group>"; };
 		C6569F9420BE91E900F9765A /* MessageSetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSetTableViewCell.swift; sourceTree = "<group>"; };
 		C6569F9520BE91E900F9765A /* MessageSetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSetTableViewCell.xib; sourceTree = "<group>"; };
 		C6569F9820BEE91B00F9765A /* UISegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extension.swift"; sourceTree = "<group>"; };
 		C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
 		C6569F9B20BF642C00F9765A /* AddMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMessageViewController.xib; sourceTree = "<group>"; };
 		C69486E81D3742CC002458A4 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		D42C6C7020EDFB4600A853D6 /* BaseUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUserDefault.swift; sourceTree = "<group>"; };
+		D42C6C7420EDFC4D00A853D6 /* ToAddressUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToAddressUserDefault.swift; sourceTree = "<group>"; };
+		D42C6C7620EDFD1D00A853D6 /* CcAddressUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CcAddressUserDefault.swift; sourceTree = "<group>"; };
 		D43E1D3920D804800036B84A /* kintai-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kintai-Bridging-Header.h"; sourceTree = "<group>"; };
 		D4DF3B6FE176448B46F350EC /* Pods-kintaiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintaiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kintaiTests/Pods-kintaiTests.release.xcconfig"; sourceTree = "<group>"; };
-		D4E3926C20D7EC1F00875829 /* SendMailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailView.swift; sourceTree = "<group>"; };
-		D4E3926E20D7EEE900875829 /* siriKintaiUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = siriKintaiUI.entitlements; sourceTree = "<group>"; };
-		D4E3926F20D7EEF000875829 /* siriKintai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = siriKintai.entitlements; sourceTree = "<group>"; };
-		D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutDataManager.swift; sourceTree = "<group>"; };
 		D4F9B54720C90E050075DB6E /* kintai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kintai.entitlements; sourceTree = "<group>"; };
 		D4F9B54920C97DEC0075DB6E /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
-		D4F9B54F20C9ADA40075DB6E /* siriKintai.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = siriKintai.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F9B55120C9ADA50075DB6E /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		D4F9B55320C9ADA50075DB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4F9B55820C9ADA50075DB6E /* siriKintaiUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = siriKintaiUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F9B55920C9ADA50075DB6E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		D4F9B55C20C9ADA50075DB6E /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
-		D4F9B55F20C9ADA50075DB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		D4F9B56120C9ADA50075DB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4F9B56F20C9B0A40075DB6E /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		E986BD35535986479FCD3D8C /* Pods_kintaiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kintaiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4D9F26C9DDF4CD0AFB4996 /* Pods-kintai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kintai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kintai/Pods-kintai.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,21 +139,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4F9B54C20C9ADA40075DB6E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F9B55520C9ADA50075DB6E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F9B55A20C9ADA50075DB6E /* IntentsUI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -209,9 +162,6 @@
 			children = (
 				D43E1D3920D804800036B84A /* kintai-Bridging-Header.h */,
 				C62C3F721C567771005E85BA /* kintai */,
-				D4F49ADA20D33FF500115294 /* Shared */,
-				D4F9B55020C9ADA50075DB6E /* siriKintai */,
-				D4F9B55B20C9ADA50075DB6E /* siriKintaiUI */,
 				C62C3F711C567771005E85BA /* Products */,
 				36C54AA74815815DC180EBF3 /* Pods */,
 				C62C3F871C567771005E85BA /* kintaiTests */,
@@ -226,8 +176,6 @@
 				C62C3F701C567771005E85BA /* kintai.app */,
 				C62C3F841C567771005E85BA /* kintaiTests.xctest */,
 				C62C3F8F1C567771005E85BA /* kintaiUITests.xctest */,
-				D4F9B54F20C9ADA40075DB6E /* siriKintai.appex */,
-				D4F9B55820C9ADA50075DB6E /* siriKintaiUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +191,7 @@
 				C62C3F7C1C567771005E85BA /* LaunchScreen.storyboard */,
 				C62C3F7A1C567771005E85BA /* Assets.xcassets */,
 				C62C3F7F1C567771005E85BA /* Info.plist */,
+				D42C6C6920EDF67100A853D6 /* Domain */,
 				D448333020EC71A6005FBE1A /* Data */,
 				D4F49ADC20D3404C00115294 /* UI */,
 			);
@@ -267,26 +216,20 @@
 			path = kintaiUITests;
 			sourceTree = "<group>";
 		};
+		D42C6C6920EDF67100A853D6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D42C6C7020EDFB4600A853D6 /* BaseUserDefault.swift */,
+				D42C6C7420EDFC4D00A853D6 /* ToAddressUserDefault.swift */,
+				D42C6C7620EDFD1D00A853D6 /* CcAddressUserDefault.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		D448333020EC71A6005FBE1A /* Data */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		D4F49ADA20D33FF500115294 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				D4F9B56F20C9B0A40075DB6E /* Intents.intentdefinition */,
-				D4F49ADB20D3401900115294 /* Data */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		D4F49ADB20D3401900115294 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				D4F49ADD20D340CC00115294 /* VoiceShortcutDataManager.swift */,
+				C6569F9220BE779900F9765A /* MessageText.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -299,32 +242,9 @@
 				C62C3F751C567771005E85BA /* ViewController.swift */,
 				C69486E81D3742CC002458A4 /* ChartViewController.swift */,
 				C6569F9020BE702100F9765A /* EditTextTableViewController.swift */,
-				C6569F9220BE779900F9765A /* messageText.swift */,
 				C6569F9A20BF642C00F9765A /* AddMessageViewController.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		D4F9B55020C9ADA50075DB6E /* siriKintai */ = {
-			isa = PBXGroup;
-			children = (
-				D4E3926F20D7EEF000875829 /* siriKintai.entitlements */,
-				D4F9B55120C9ADA50075DB6E /* IntentHandler.swift */,
-				D4F9B55320C9ADA50075DB6E /* Info.plist */,
-			);
-			path = siriKintai;
-			sourceTree = "<group>";
-		};
-		D4F9B55B20C9ADA50075DB6E /* siriKintaiUI */ = {
-			isa = PBXGroup;
-			children = (
-				D4E3926E20D7EEE900875829 /* siriKintaiUI.entitlements */,
-				D4F9B55C20C9ADA50075DB6E /* IntentViewController.swift */,
-				D4E3926C20D7EC1F00875829 /* SendMailView.swift */,
-				D4F9B55E20C9ADA50075DB6E /* MainInterface.storyboard */,
-				D4F9B56120C9ADA50075DB6E /* Info.plist */,
-			);
-			path = siriKintaiUI;
 			sourceTree = "<group>";
 		};
 		ED6A7E2DAB67ADA0B11BD20A /* Frameworks */ = {
@@ -363,8 +283,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D4F9B56320C9ADA50075DB6E /* PBXTargetDependency */,
-				D4F9B56620C9ADA50075DB6E /* PBXTargetDependency */,
 			);
 			name = kintai;
 			productName = kintai;
@@ -409,40 +327,6 @@
 			productReference = C62C3F8F1C567771005E85BA /* kintaiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		D4F9B54E20C9ADA40075DB6E /* siriKintai */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4F9B56B20C9ADA50075DB6E /* Build configuration list for PBXNativeTarget "siriKintai" */;
-			buildPhases = (
-				D4F9B54B20C9ADA40075DB6E /* Sources */,
-				D4F9B54C20C9ADA40075DB6E /* Frameworks */,
-				D4F9B54D20C9ADA40075DB6E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = siriKintai;
-			productName = siriKintai;
-			productReference = D4F9B54F20C9ADA40075DB6E /* siriKintai.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		D4F9B55720C9ADA50075DB6E /* siriKintaiUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4F9B56820C9ADA50075DB6E /* Build configuration list for PBXNativeTarget "siriKintaiUI" */;
-			buildPhases = (
-				D4F9B55420C9ADA50075DB6E /* Sources */,
-				D4F9B55520C9ADA50075DB6E /* Frameworks */,
-				D4F9B55620C9ADA50075DB6E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = siriKintaiUI;
-			productName = siriKintaiUI;
-			productReference = D4F9B55820C9ADA50075DB6E /* siriKintaiUI.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -473,22 +357,6 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = C62C3F6F1C567771005E85BA;
 					};
-					D4F9B54E20C9ADA40075DB6E = {
-						CreatedOnToolsVersion = 10.0;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					D4F9B55720C9ADA50075DB6E = {
-						CreatedOnToolsVersion = 10.0;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-						};
-					};
 				};
 			};
 			buildConfigurationList = C62C3F6B1C567771005E85BA /* Build configuration list for PBXProject "kintai" */;
@@ -507,8 +375,6 @@
 				C62C3F6F1C567771005E85BA /* kintai */,
 				C62C3F831C567771005E85BA /* kintaiTests */,
 				C62C3F8E1C567771005E85BA /* kintaiUITests */,
-				D4F9B54E20C9ADA40075DB6E /* siriKintai */,
-				D4F9B55720C9ADA50075DB6E /* siriKintaiUI */,
 			);
 		};
 /* End PBXProject section */
@@ -537,21 +403,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F9B54D20C9ADA40075DB6E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F9B55620C9ADA50075DB6E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F9B56020C9ADA50075DB6E /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n${PODS_ROOT}/SwiftLint/swiftlintelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which \"swiftlint\" >/dev/null; then\n swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -683,14 +534,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62C3F761C567771005E85BA /* ViewController.swift in Sources */,
-				C6569F9320BE779900F9765A /* messageText.swift in Sources */,
+				C6569F9320BE779900F9765A /* MessageText.swift in Sources */,
 				C69486E91D3742CC002458A4 /* ChartViewController.swift in Sources */,
-				D4F9B57020C9B0A40075DB6E /* Intents.intentdefinition in Sources */,
+				D42C6C7520EDFC4D00A853D6 /* ToAddressUserDefault.swift in Sources */,
+				D42C6C7720EDFD1D00A853D6 /* CcAddressUserDefault.swift in Sources */,
 				C6569F9920BEE91B00F9765A /* UISegmentedControl+Extension.swift in Sources */,
 				C6569F9120BE702100F9765A /* EditTextTableViewController.swift in Sources */,
 				C6569F9620BE91E900F9765A /* MessageSetTableViewCell.swift in Sources */,
+				D42C6C7120EDFB4600A853D6 /* BaseUserDefault.swift in Sources */,
 				C6569F9C20BF642C00F9765A /* AddMessageViewController.swift in Sources */,
-				D4F49ADE20D340CC00115294 /* VoiceShortcutDataManager.swift in Sources */,
 				C62C3F741C567771005E85BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,24 +563,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4F9B54B20C9ADA40075DB6E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F9B57120C9B11A0075DB6E /* Intents.intentdefinition in Sources */,
-				D4F9B55220C9ADA50075DB6E /* IntentHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F9B55420C9ADA50075DB6E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F9B55D20C9ADA50075DB6E /* IntentViewController.swift in Sources */,
-				D4E3926D20D7EC1F00875829 /* SendMailView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -741,16 +575,6 @@
 			isa = PBXTargetDependency;
 			target = C62C3F6F1C567771005E85BA /* kintai */;
 			targetProxy = C62C3F901C567771005E85BA /* PBXContainerItemProxy */;
-		};
-		D4F9B56320C9ADA50075DB6E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4F9B55720C9ADA50075DB6E /* siriKintaiUI */;
-			targetProxy = D4F9B56220C9ADA50075DB6E /* PBXContainerItemProxy */;
-		};
-		D4F9B56620C9ADA50075DB6E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4F9B54E20C9ADA40075DB6E /* siriKintai */;
-			targetProxy = D4F9B56520C9ADA50075DB6E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -769,14 +593,6 @@
 				C62C3F7D1C567771005E85BA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D4F9B55E20C9ADA50075DB6E /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4F9B55F20C9ADA50075DB6E /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -818,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)  ";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -859,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.2;
@@ -871,7 +687,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB4D9F26C9DDF4CD0AFB4996 /* Pods-kintai.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = kintai/kintai.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -879,7 +694,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = kintai/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -898,7 +713,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 799CA12A2215588E4F9B03CB /* Pods-kintai.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = kintai/kintai.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -906,7 +720,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = kintai/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -928,6 +742,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = kintaiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -946,6 +761,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = kintaiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -994,176 +810,6 @@
 			};
 			name = Release;
 		};
-		D4F9B56920C9ADA50075DB6E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5S9BE29758;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = siriKintaiUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai.siriKintaiUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D4F9B56A20C9ADA50075DB6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5S9BE29758;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = siriKintaiUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai.siriKintaiUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D4F9B56C20C9ADA50075DB6E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = siriKintai/siriKintai.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5S9BE29758;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = siriKintai/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai.siriKintai;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D4F9B56D20C9ADA50075DB6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = siriKintai/siriKintai.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5S9BE29758;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = siriKintai/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = tate.kintai.siriKintai;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1199,24 +845,6 @@
 			buildConfigurations = (
 				C62C3F9F1C567772005E85BA /* Debug */,
 				C62C3FA01C567772005E85BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4F9B56820C9ADA50075DB6E /* Build configuration list for PBXNativeTarget "siriKintaiUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4F9B56920C9ADA50075DB6E /* Debug */,
-				D4F9B56A20C9ADA50075DB6E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4F9B56B20C9ADA50075DB6E /* Build configuration list for PBXNativeTarget "siriKintai" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4F9B56C20C9ADA50075DB6E /* Debug */,
-				D4F9B56D20C9ADA50075DB6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

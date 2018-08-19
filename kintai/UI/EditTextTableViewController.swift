@@ -7,16 +7,20 @@
 //
 
 import UIKit
-//import RealmSwift
+import RealmSwift
 
 class EditTextTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
     @IBOutlet weak var tableView: UITableView!
+
+    enum Section: Int, CaseIterable {
+        case messageSection = 0
+        case addSection
+    }
     
-//    let realm = try! Realm()
-//    // DB
-//    var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
-//
+    let realm = try! Realm()
+    // DB
+    var messageArray = try! Realm().objects(MessageText.self).sorted(byKeyPath: "id", ascending: false)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -36,14 +40,17 @@ class EditTextTableViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return Section.allCases.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1// messageArray.count
-        } else {
+        switch Section(rawValue: section) {
+        case .some(.messageSection):
+            return messageArray.count
+        case .some(.addSection):
             return 1
+        case .none:
+            return 0
         }
     }
 
@@ -55,7 +62,7 @@ class EditTextTableViewController: UIViewController, UITableViewDelegate, UITabl
                 fatalError()
             }
             cell.fill(
-                title : "hoge"//messageArray[indexPath.row].title
+                title : messageArray[indexPath.row].title
             )
             return cell
         } else {
@@ -67,5 +74,11 @@ class EditTextTableViewController: UIViewController, UITableViewDelegate, UITabl
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return MessageSetTableViewCell.cellHeight
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let modalViewController = AddMessageViewController()
+        let navigationController = UINavigationController(rootViewController: modalViewController)
+        present(navigationController, animated: true, completion: nil)
     }
 }

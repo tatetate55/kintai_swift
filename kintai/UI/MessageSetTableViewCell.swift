@@ -25,6 +25,6 @@ class MessageSetTableViewCell: UITableViewCell {
     }
     
     func fill(title: String) {
-       titleLabel!.text    = title
+       titleLabel!.text = title
     }
 }

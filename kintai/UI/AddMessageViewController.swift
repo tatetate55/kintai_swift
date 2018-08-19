@@ -20,7 +20,18 @@ class AddMessageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func save() {
+        //textを保存する処理
+    }
+
+    // タイトルのところ押す
+
+    // メインテキスト押す
     
+//    func text(<#parameters#>) -> <#return type#> {
+//        <#function body#>
+//    }
     /*
     // MARK: - Navigation
 

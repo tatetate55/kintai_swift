@@ -15,86 +15,68 @@ import MobileCoreServices
 import UserNotifications
 import RealmSwift
 
-var vacationType: Int = 0 //　休みの種類
+import Intents
+
+var vacationType: Int = 0 // 休みの種類
 
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var toText: UITextField!
     @IBOutlet weak var ccText: UITextField!
-    @IBOutlet weak var myName: UITextField!
-    @IBOutlet weak var bossName: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainText: UITextView!
 
-    //    let realm = try! Realm()
+    let realm = try! Realm()
     // DB
-    //    var messageArray = try! Realm().objects(messageText.self).sorted(byKeyPath: "id", ascending: false)
-    
+    var messageArray = try! Realm().objects(MessageText.self).sorted(byKeyPath: "id", ascending: false)
+
     @IBOutlet weak var switchVacation: UISegmentedControl!
+    
     override func viewDidLoad() {
+//        addSiriDonate()
         super.viewDidLoad()
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
         }
-        push()
-        addSiriDonate()
         // 「userDefault」というインスタンスをつくる。
         let userDefault = UserDefaults.standard
         // ここに初期化処理を書く
         // "firstLaunch"をキーに、Bool型の値を保持する
         let dict = ["firstLaunch": true]
-        // デフォルト値登録
         // ※すでに値が更新されていた場合は、更新後の値のままになる
         userDefault.register(defaults: dict)
         // "firstLaunch"に紐づく値がtrueなら(=初回起動)、値をfalseに更新して処理を行う
-        //        if ud.bool(forKey: "firstLaunch") {
-        //            print("初回起動の時だけ呼ばれるよ")
-        //            let message = messageText()
-        //            message.title = "【勤怠】タイトル"
-        //            print(message.title)
-        //            message.message = "タイトルと本文の編集はメニューの編集画面からできます。"
-        ////            try! realm.write {
-        ////                realm.add(message, update: true)
-        ////            }
-        //            ud.set(false, forKey: "firstLaunch")
-        //
-        //        }
-        // キーがidの値をとります。
-        if let udTo = userDefault.object(forKey: "udTo") as? String {
-            toText.text = udTo
+        if userDefault.bool(forKey: "firstLaunch") {
+            print("初回起動の時だけ呼ばれるよ")
+            let message = MessageText()
+            message.title = "【勤怠】タイトル"
+            print(message.title)
+            message.message = "タイトルと本文の編集はメニューの編集画面からできます。"
+            try! realm.write {
+                realm.add(message, update: true)
+            }
+            userDefault.set(false, forKey: "firstLaunch")
         }
-        if let udCc = userDefault.object(forKey: "udCc") as? String {
-            ccText.text = udCc
-        }
-        if let udName = userDefault.object(forKey: "udName") as? String {
-            myName.text = udName
-        }
-        if let udBoss = userDefault.object(forKey: "udBoss") as? String {
-            bossName.text = udBoss
-        }
+
+        toText.text = ToAddressUserDefault().toAddress
+        ccText.text = CcAddressUserDefault().ccAddress
+
         let date: NSDate = NSDate()
         let cal: NSCalendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
-        let dateComp: NSDateComponents = cal.components(
+        let _: NSDateComponents = cal.components(
             [NSCalendar.Unit.weekday],
             from: date as Date
             ) as NSDateComponents
-        // キーidの値を削除
-        //ud.removeObjectForKey("id")
-        createTitle(myName: myName.text!, dateCate: "午前半休")
-        createMainText(myName: myName.text!, bossName: bossName.text!, dateCate: "午前半休")
-        
-        // Do any additional setup after loading the view, typically from a nib.
+
         // selfをデリゲートにする
         toText.delegate = self
         ccText.delegate = self
-        myName.delegate = self
-        bossName.delegate = self
 
-        //        //最後にセグメント追加
-        //        var messageTitleArray:[String] = []
-        //        for message in messageArray {
-        //            messageTitleArray.append(message.title)
-        //        }
-        //        switchVacation.changeAllSegmentWithArray(arr: messageTitleArray)
+        // 最後にセグメント追加
+        var messageTitleArray: [String] = []
+        for message in messageArray {
+            messageTitleArray.append(message.title)
+        }
+        switchVacation.changeAllSegmentWithArray(arr: messageTitleArray)
     }
 
     @IBAction func changeKishoSegment(sender: UISegmentedControl) {
@@ -102,49 +84,17 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     }
 
     @IBAction func saveButton(sender: AnyObject) {
-        // udに保存をする
-        let userDefault = UserDefaults.standard
-        userDefault.set(toText.text, forKey: "udTo")
-        userDefault.set(ccText.text, forKey: "udCc")
-        userDefault.set(myName.text, forKey: "udName")
-        userDefault.set(bossName.text, forKey: "udBoss")
-        // キーidの値を削除ud.removeObjectForKey("id")
-        if vacationType == 1 {
-            createTitle(myName: myName.text!, dateCate: "午前半休")
-            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate: "午前半休")
-        } else {
-            createTitle(myName: myName.text!, dateCate: "午前半休")
-            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate: "全休")
-        }
+        saveAction()
     }
 
     func saveAction() {
         // udに保存をする
-        let ud = UserDefaults.standard
-        ud.set(toText.text, forKey: "udTo")
-        ud.set(ccText.text, forKey: "udCc")
-        ud.set(myName.text, forKey: "udName")
-        ud.set(bossName.text, forKey: "udBoss")
-        // キーidの値を削除ud.removeObjectForKey("id")
-        if(vacationType == 1){
-            createTitle(myName: myName.text!, dateCate:"午前半休")
-            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"午前半休")
-        } else {
-            createTitle(myName: myName.text!, dateCate:"全休")
-            createMainText(myName: myName.text!, bossName: bossName.text!, dateCate:"全休")
-        }
+        ToAddressUserDefault().toAddress = toText.text
+        CcAddressUserDefault().ccAddress = ccText.text
     }
 
     @IBAction func sendButton(sender: AnyObject) {
-        // mailCore
-
-        let intent = SendMailIntent()
-        let interaction = INInteraction(intent: intent, response: nil)
-        interaction.donate() { _ in
-            print("Donated!")
-        }
-
-        self.saveAction()
+        saveAction()
         //メールを送信できるかチェック
         if MFMailComposeViewController.canSendMail() == false {
             print("Email Send Failed")
@@ -154,7 +104,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
         let mailViewController = MFMailComposeViewController()
         let toRecipients = self.toText.text!
         let ccRecipients =  self.ccText.text!
-        let mainTexts:String = self.mainText.text!
+        let mainTexts: String = self.mainText.text!
         mailViewController.mailComposeDelegate = self
         mailViewController.setSubject(self.titleLabel.text!)
         if toRecipients.contains(",") {
@@ -187,17 +137,16 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
 
     // タイトルを作成
     func createTitle(myName: String, dateCate: String ) {
-
         let dateFormatter = DateFormatter()                                   // フォーマットの取得
         dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale?  // JPロケール
-        dateFormatter.dateFormat = "MM/dd"         // フォーマットの指定
+        dateFormatter.dateFormat = "MM/dd" // フォーマットの指定
         print(dateFormatter.string(from: NSDate() as Date))
-        titleLabel.text = "【勤怠】\(dateFormatter.string(from: NSDate() as Date)) \(myName)　\(dateCate)";
+        titleLabel.text = "【勤怠】\(dateFormatter.string(from: NSDate() as Date)) \(myName)　\(dateCate)"
     }
 
     func createMainText(myName: String, bossName: String, dateCate: String) {
-        titleLabel.text = "今日休む"//messageArray[vacationType].title
-        mainText.text = "hogeさんお疲れ様です。\n本日体調不良のため\n全休を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。" //messageArray[vacationType].message //
+        titleLabel.text = messageArray[vacationType].title //"今日休む"
+        mainText.text = messageArray[vacationType].message //"hogeさんお疲れ様です。\n本日体調不良のため\n全休を取得させてください。\nお忙しいところご迷惑をおかけして大変申し訳ございません。\n\nよろしくお願い致します。"
     }
 
     @IBAction func tapScreen(sender: AnyObject) {
@@ -207,67 +156,29 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate, UIT
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         self.dismiss(animated: true, completion: nil)
     }
-
-    func addSiriDonate() {
-        // How to donate a shortcut
-        let userActivity = NSUserActivity(activityType: "com.kintai.siri")
-        userActivity.isEligibleForSearch = true
-        userActivity.isEligibleForPrediction = true
-        userActivity.title = "勤怠アプリでsiriに話しかけるフレーズ"
-        userActivity.userInfo = ["key": "value"]
-        userActivity.isEligibleForSearch = true
-        userActivity.isEligibleForPrediction = true
-        userActivity.suggestedInvocationPhrase = "今日休む"
-
-        let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
-        let image = UIImage(named: "beach")!
-        attributes.thumbnailData = image.pngData()
-        attributes.contentDescription = "siriからアプリを起動して素早く休もう！"
-        userActivity.contentAttributeSet = attributes
-        self.userActivity = userActivity
-    }
+//
+//    func addSiriDonate() {
+//        // How to donate a shortcut
+//        let userActivity = NSUserActivity(activityType: "com.myapp.name.my-activity-type")
+//        userActivity.isEligibleForSearch = true
+//        userActivity.isEligibleForPrediction = true
+//        userActivity.title = "勤怠アプリでsiriに話しかけるフレーズ"
+//        userActivity.isEligibleForSearch = true
+//        userActivity.isEligibleForPrediction = true // <-ココ
+//        userActivity.suggestedInvocationPhrase = "テスト"
+//        let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
+//        attributes.contentDescription = "siriからアプリを起動する"
+//        userActivity.contentAttributeSet = attributes
+//        self.userActivity = userActivity
+//    }
 }
 
 extension UISegmentedControl {
-    func changeAllSegmentWithArray(arr: [String]){
+    func changeAllSegmentWithArray(arr: [String]) {
         self.removeAllSegments()
         for str in arr {
             self.insertSegment(withTitle: str, at: self.numberOfSegments, animated: false)
         }
         self.selectedSegmentIndex = 0
-    }
-}
-
-extension ViewController {
-    func push() {
-        let seconds = 1
-
-        // ------------------------------------
-        // 通知の発行: タイマーを指定して発行
-        // ------------------------------------
-
-        // content
-        let content = UNMutableNotificationContent()
-        content.title = "It's time."
-        content.subtitle = "\(seconds) seconds elapsed!"
-        content.body = "I told you now because you had set \(seconds) seconds before."
-        content.sound = UNNotificationSound.default
-
-        // trigger
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(seconds),
-                                                        repeats: false)
-
-        // request includes content & trigger
-        let request = UNNotificationRequest(identifier: "TIMER\(seconds)",
-            content: content,
-            trigger: trigger)
-
-        // schedule notification by adding request to notification center
-        let center = UNUserNotificationCenter.current()
-        center.add(request) { (error) in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-        }
     }
 }
